@@ -12,9 +12,6 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
   },
-  other: {
-    "codex-preview": "development",
-  },
   icons: {
     icon: "/assets/logo.svg",
     shortcut: "/assets/logo.svg",

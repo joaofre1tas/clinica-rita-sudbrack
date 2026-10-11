@@ -60,3 +60,20 @@ test("a página do curso e todas as nove comparações estão incluídas", async
     }
   }
 });
+
+test("o catálogo lista os 64 perfumes com foto e botão de WhatsApp", async () => {
+  const html = await readFile(
+    new URL(".next/server/app/catalogo.html", root),
+    "utf8",
+  );
+  assert.match(html, /Perfumaria/);
+  const images = [
+    ...html.matchAll(/src="(\/assets\/images\/catalogo\/[^"?]+\.webp)"/g),
+  ].map(([, path]) => path);
+  const bottles = images.filter((path) => !path.includes("/capa-"));
+  assert.equal(new Set(bottles).size, 64);
+  for (const path of images) await access(new URL(`public${path}`, root));
+  const buttons = html.match(/Consultar valor<\/span>/g) ?? [];
+  assert.equal(buttons.length, 64);
+  assert.match(html, /wa\.me\/5551995599459\?text=[^"]*Yara/);
+});

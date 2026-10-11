@@ -1,0 +1,286 @@
+.catalog-hero-visual {
+  position: relative;
+}
+
+.catalog-hero-inset {
+  border: 8px solid #e4e0d5;
+  object-fit: cover;
+  width: 38%;
+  aspect-ratio: 3 / 4;
+  position: absolute;
+  bottom: -44px;
+  left: -56px;
+  box-shadow: 0 24px 60px #382f2829;
+}
+
+.catalog-list {
+  padding-block: clamp(84px, 9vw, 130px);
+}
+
+.catalog-toolbar {
+  border-bottom: 1px solid var(--line);
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: clamp(48px, 5vw, 72px);
+  padding-bottom: 22px;
+  display: flex;
+}
+
+.catalog-search {
+  flex: 1;
+  align-items: center;
+  gap: 14px;
+  max-width: 460px;
+  display: flex;
+}
+
+.catalog-search-icon {
+  color: var(--taupe);
+  flex: none;
+  display: grid;
+}
+
+.catalog-search-icon svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.6px;
+  width: 20px;
+  height: 20px;
+}
+
+.catalog-search-label {
+  clip-path: inset(50%);
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.catalog-search input {
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  width: 100%;
+  min-height: 48px;
+  color: var(--graphite);
+  font: inherit;
+  /* 16px evita o zoom automático no iPhone */
+  font-size: 16px;
+}
+
+.catalog-search input::placeholder {
+  color: #382f2880;
+}
+
+.catalog-search input:focus {
+  outline: none;
+}
+
+.catalog-search:focus-within .catalog-search-icon {
+  color: var(--brown);
+}
+
+.catalog-toolbar:focus-within {
+  border-color: var(--brown);
+}
+
+.catalog-count {
+  color: var(--taupe);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.catalog-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 64px 40px;
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+}
+
+.catalog-card {
+  flex-direction: column;
+  min-width: 0;
+  display: flex;
+}
+
+.catalog-card-image {
+  background: var(--sage);
+  border: 1px solid #382f2829;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.catalog-card-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (hover: hover) {
+  .catalog-card:hover .catalog-card-image img {
+    transform: scale(1.04);
+  }
+}
+
+.catalog-card-body {
+  flex: 1;
+  padding-top: 26px;
+}
+
+.catalog-card h3 {
+  font-size: clamp(1.75rem, 2.1vw, 2.2rem);
+  line-height: 1.05;
+}
+
+.catalog-card-notes {
+  color: #141314b3;
+  margin-top: 14px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.catalog-card-tagline {
+  color: var(--taupe);
+  margin-top: 12px;
+  font-size: 0.94rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.catalog-card-button {
+  width: 100%;
+  margin-top: 26px;
+}
+
+.catalog-empty {
+  text-align: center;
+  padding: 80px 0 20px;
+}
+
+.catalog-empty p {
+  color: var(--brown);
+  font-size: 1.05rem;
+}
+
+.catalog-empty button {
+  border: 0;
+  border-bottom: 1px solid var(--brown);
+  background: none;
+  color: var(--brown);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 22px;
+  padding: 10px 0;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.catalog-empty button:focus-visible,
+.catalog-card-button:focus-visible {
+  outline: 2px solid var(--taupe);
+  outline-offset: 4px;
+}
+
+@media (width<=1180px) {
+  .catalog-hero-inset {
+    left: -28px;
+  }
+
+  .catalog-grid {
+    gap: 56px 28px;
+  }
+}
+
+@media (width<=920px) {
+  .catalog-hero-inset {
+    width: 30%;
+    bottom: -32px;
+    left: auto;
+    right: 24px;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width<=640px) {
+  .catalog-hero-inset {
+    border-width: 6px;
+    width: 34%;
+    right: 14px;
+  }
+
+  .catalog-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding-bottom: 16px;
+  }
+
+  .catalog-search {
+    max-width: none;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 12px;
+  }
+
+  /* No celular o card vira uma linha compacta: foto à esquerda, texto à direita. */
+  .catalog-card {
+    border-bottom: 1px solid var(--line);
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: start;
+    gap: 18px 16px;
+    padding-block: 28px;
+    display: grid;
+  }
+
+  .catalog-card-body {
+    padding-top: 0;
+  }
+
+  /* O site força o tamanho de todo h3 no celular; aqui o card precisa de um título menor. */
+  main .catalog-card h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .catalog-card-notes,
+  .catalog-card-tagline {
+    font-size: 0.9rem;
+  }
+
+  .catalog-card-notes {
+    margin-top: 8px;
+  }
+
+  .catalog-card-tagline {
+    margin-top: 8px;
+  }
+
+  .catalog-card-button {
+    grid-column: 1 / -1;
+    min-height: 52px;
+    margin-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catalog-card-image img {
+    transition: none;
+  }
+}

@@ -31,3 +31,8 @@
     right: -10vw;
   }
 }
+
+/* Este destaque fica em linha própria: precisa de altura de linha normal. */
+.final-cta h2 em {
+  line-height: 1.04;
+}

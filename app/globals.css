@@ -381,7 +381,9 @@ h3 em {
   letter-spacing: -0.03em;
   font-family: var(--font-urbanist), Arial, sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
+  /* A Urbanist tem métricas maiores que a Andine; sem isto a linha do destaque abre um vão. */
+  line-height: 0;
 }
 h2 {
   font-size: clamp(3.25rem, 5.1vw, 5.85rem);

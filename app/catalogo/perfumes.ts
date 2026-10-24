@@ -167,8 +167,8 @@ export const perfumes: Perfume[] = [
       "Fresco, unissex e versátil, um clássico árabe que agrada a todos.",
   },
   {
-    slug: "g-gala",
-    name: "G Gala",
+    slug: "ghala",
+    name: "Ghala",
     notes: "Floral oriental feminino com notas de rosa, frutas e almíscar.",
     tagline: "Delicado e festivo, ideal para ocasiões especiais.",
   },

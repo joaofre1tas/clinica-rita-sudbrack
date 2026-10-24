@@ -1116,7 +1116,7 @@ export default function HomePage() {
         <div className="section-shell footer-main">
           <div className="footer-brand">
             <img src="/assets/logo.svg" alt="Clínica Rita Sudbrack" />
-            <p>{"Estética facial, saúde da pele e cuidado individualizado."}</p>
+            <p className="brand-slogan">Estética que reflete a alma.</p>
           </div>
           <div>
             <p className="footer-title">{"Navegação"}</p>

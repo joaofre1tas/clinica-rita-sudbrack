@@ -322,9 +322,7 @@ export default function CoursePage() {
         <div className="section-shell footer-main">
           <div className="footer-brand">
             <img src="/assets/logo.svg" alt="Clínica Rita Sudbrack" />
-            <p>
-              {"Formação profissional com conhecimento, precisão e prática."}
-            </p>
+            <p className="brand-slogan">Estética que reflete a alma.</p>
           </div>
           <div>
             <p className="footer-title">{"Navegação"}</p>

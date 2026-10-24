@@ -3,14 +3,14 @@
 }
 
 .catalog-hero-inset {
-  border: 8px solid #e4e0d5;
+  border: 8px solid color-mix(in srgb, #999a83 16%, #eeeadf);
   object-fit: cover;
   width: 38%;
   aspect-ratio: 3 / 4;
   position: absolute;
   bottom: -44px;
   left: -56px;
-  box-shadow: 0 24px 60px #382f2829;
+  box-shadow: 0 24px 60px #261d1629;
 }
 
 .catalog-list {
@@ -73,7 +73,7 @@
 }
 
 .catalog-search input::placeholder {
-  color: #382f2880;
+  color: #261d1680;
 }
 
 .catalog-search input:focus {
@@ -114,7 +114,7 @@
 
 .catalog-card-image {
   background: var(--sage);
-  border: 1px solid #382f2829;
+  border: 1px solid #261d1629;
   aspect-ratio: 1;
   overflow: hidden;
 }
@@ -143,7 +143,7 @@
 }
 
 .catalog-card-notes {
-  color: #141314b3;
+  color: #261d16b3;
   margin-top: 14px;
   font-size: 0.94rem;
   line-height: 1.6;

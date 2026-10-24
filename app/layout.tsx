@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./identidade.css";
 
 export const metadata: Metadata = {
   title: "Clínica Rita Sudbrack | Estética Facial e Cuidados com a Pele",

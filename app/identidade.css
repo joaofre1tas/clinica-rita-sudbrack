@@ -1,0 +1,33 @@
+/*
+ * Elementos da identidade visual (Manual Visual da Marca, Makallu 2024)
+ * que não existiam na versão anterior do site.
+ */
+
+/* Marca carimbo "RS" no lugar das letras em texto. */
+.final-cta-ornament {
+  background: #999a83;
+  color: transparent;
+  opacity: 0.14;
+  font-size: 0;
+  width: min(46vw, 640px);
+  aspect-ratio: 260 / 194;
+  bottom: -4vw;
+  right: -3vw;
+  -webkit-mask: url(/assets/rs-monograma.svg) center / contain no-repeat;
+  mask: url(/assets/rs-monograma.svg) center / contain no-repeat;
+}
+
+/* Slogan da marca no rodapé, na fonte de apoio (Source Sans Pro Light). */
+.footer-brand .brand-slogan {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+@media (width<=640px) {
+  .final-cta-ornament {
+    width: 70vw;
+    bottom: -8vw;
+    right: -10vw;
+  }
+}

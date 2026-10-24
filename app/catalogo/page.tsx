@@ -146,7 +146,7 @@ export default function CatalogPage() {
         <div className="section-shell footer-main">
           <div className="footer-brand">
             <img src="/assets/logo.svg" alt="Clínica Rita Sudbrack" />
-            <p>Perfumaria árabe selecionada pela Clínica Rita Sudbrack.</p>
+            <p className="brand-slogan">Estética que reflete a alma.</p>
           </div>
           <div>
             <p className="footer-title">Navegação</p>

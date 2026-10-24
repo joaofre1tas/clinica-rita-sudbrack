@@ -36,3 +36,21 @@
 .final-cta h2 em {
   line-height: 1.04;
 }
+
+/*
+ * A Andine tem minúsculas 25% mais altas que a Urbanist (x-height 0,625 contra 0,501).
+ * O destaque é ampliado nessa proporção para as duas fontes terem o mesmo tamanho visual.
+ */
+h1 em,
+h2 em,
+h3 em,
+.hero h1 em {
+  font-size: 1.25em;
+}
+
+/* Entrelinha dos títulos um pouco mais aberta que na versão anterior (0,96 a 1,08). */
+main h1,
+main h2,
+main h3 {
+  line-height: 1.12 !important;
+}

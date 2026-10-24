@@ -3166,15 +3166,15 @@ h2 {
 }
 @media (width>=641px) {
   main h1 {
-    font-size: clamp(2.51rem, 3.49vw, 4.01rem) !important;
+    font-size: clamp(2.4rem, 3vw, 3.25rem) !important;
     line-height: 1.05 !important;
   }
   main h2 {
-    font-size: clamp(1.95rem, 2.89vw, 3.34rem) !important;
+    font-size: clamp(1.9rem, 2.5vw, 2.75rem) !important;
     line-height: 1.05 !important;
   }
   main h3 {
-    font-size: clamp(1.27rem, 2.17vw, 2.89rem) !important;
+    font-size: clamp(1.25rem, 1.8vw, 2.25rem) !important;
     line-height: 1.06 !important;
   }
   main .step-card h3 {
@@ -3186,7 +3186,7 @@ h2 {
   }
   .course-detail-page .course-detail-hero h1 {
     max-width: 700px;
-    font-size: clamp(2.25rem, 3.11vw, 3.56rem) !important;
+    font-size: clamp(2.2rem, 2.8vw, 3rem) !important;
   }
 }
 @media (width<=640px) {

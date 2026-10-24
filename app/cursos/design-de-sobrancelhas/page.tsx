@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CourseModules from "./CourseModules";
+import SymeSignature from "../../components/SymeSignature";
 
 export const metadata: Metadata = {
   title: "Curso de Design de Sobrancelhas | Clínica Rita Sudbrack",
@@ -358,16 +359,7 @@ export default function CoursePage() {
           <span>
             {"© 2026 Clínica Rita Sudbrack. Todos os direitos reservados."}
           </span>
-          <span>
-            {"Desenvolvido por"}{" "}
-            <a
-              href="https://symewebstudio.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {"Syme Web Studio"}
-            </a>
-          </span>
+          <SymeSignature />
         </div>
       </footer>
       <a

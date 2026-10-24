@@ -1,4 +1,5 @@
 import ResultsCarousel from "./components/ResultsCarousel";
+import SymeSignature from "./components/SymeSignature";
 
 export default function HomePage() {
   return (
@@ -1153,16 +1154,7 @@ export default function HomePage() {
           <span>
             {"© 2026 Clínica Rita Sudbrack. Todos os direitos reservados."}
           </span>
-          <span>
-            {"Desenvolvido por"}{" "}
-            <a
-              href="https://symewebstudio.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {"Syme Web Studio"}
-            </a>
-          </span>
+          <SymeSignature />
         </div>
       </footer>
       <a

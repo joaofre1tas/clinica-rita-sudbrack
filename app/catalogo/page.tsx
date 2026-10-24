@@ -4,6 +4,7 @@ import CatalogGrid from "./CatalogGrid";
 import { perfumes } from "./perfumes";
 import { catalogWhatsappUrl } from "./whatsapp";
 import "./catalogo.css";
+import SymeSignature from "../components/SymeSignature";
 
 export const metadata: Metadata = {
   title: "Catálogo de Perfumes Árabes | Clínica Rita Sudbrack",
@@ -175,16 +176,7 @@ export default function CatalogPage() {
           <span>
             © 2026 Clínica Rita Sudbrack. Todos os direitos reservados.
           </span>
-          <span>
-            {"Desenvolvido por "}
-            <a
-              href="https://symewebstudio.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Syme Web Studio
-            </a>
-          </span>
+          <SymeSignature />
         </div>
       </footer>
 

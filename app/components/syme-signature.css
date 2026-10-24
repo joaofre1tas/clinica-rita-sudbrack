@@ -1,0 +1,115 @@
+/* Assinatura padrão da Syme, adaptada ao rodapé claro do site. */
+.footer-bottom .syme-by {
+  color: var(--taupe);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* Espaço para a assinatura não ficar atrás do botão flutuante do WhatsApp. */
+.site-footer:has(.syme-by) {
+  padding-bottom: 104px;
+}
+
+.syme-by {
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+  transition: color 0.28s ease;
+  display: inline-flex;
+}
+
+.syme-by__txt {
+  white-space: nowrap;
+  transition: transform 0.28s ease;
+}
+
+.syme-by__mark {
+  width: 20px;
+  height: 20px;
+  transition: width 0.28s ease;
+  display: block;
+  position: relative;
+}
+
+.syme-by__mark img {
+  width: auto;
+  max-width: none;
+  height: 20px;
+  transition: opacity 0.28s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.syme-by__full {
+  opacity: 0;
+}
+
+.footer-bottom .syme-by:focus-visible {
+  color: var(--brown);
+  outline: 1px solid var(--taupe);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+.syme-by:focus-visible .syme-by__txt {
+  transform: translateX(-4px);
+}
+
+.syme-by:focus-visible .syme-by__mark {
+  width: 74px;
+}
+
+.syme-by:focus-visible .syme-by__sym {
+  opacity: 0;
+}
+
+.syme-by:focus-visible .syme-by__full {
+  opacity: 1;
+}
+
+/* Telas de toque não têm hover: o logotipo já aparece completo. */
+@media (hover: none) {
+  .syme-by__mark {
+    width: 74px;
+  }
+
+  .syme-by__sym {
+    opacity: 0;
+  }
+
+  .syme-by__full {
+    opacity: 1;
+  }
+}
+
+@media (hover: hover) {
+  .footer-bottom .syme-by:hover {
+    color: var(--brown);
+  }
+
+  .syme-by:hover .syme-by__txt {
+    transform: translateX(-4px);
+  }
+
+  .syme-by:hover .syme-by__mark {
+    width: 74px;
+  }
+
+  .syme-by:hover .syme-by__sym {
+    opacity: 0;
+  }
+
+  .syme-by:hover .syme-by__full {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .syme-by,
+  .syme-by__txt,
+  .syme-by__mark,
+  .syme-by__mark img {
+    transition: none;
+  }
+}

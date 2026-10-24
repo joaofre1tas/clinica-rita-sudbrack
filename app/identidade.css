@@ -19,7 +19,7 @@
 
 /* Slogan da marca no rodapé, na fonte de apoio. */
 .footer-brand .brand-slogan {
-  font-family: var(--font-apoio), Arial, sans-serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-weight: 300;
   letter-spacing: -0.02em;
 }

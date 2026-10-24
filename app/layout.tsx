@@ -3,11 +3,11 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import "./identidade.css";
 
-// Fonte de apoio: palavras de destaque dos títulos e slogan.
+// Urbanist: fonte de todos os textos (os títulos seguem na Andine).
 const urbanist = Urbanist({
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400"],
-  variable: "--font-apoio",
+  style: ["normal", "italic"],
+  variable: "--font-urbanist",
   display: "swap",
 });
 

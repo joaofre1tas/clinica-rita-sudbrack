@@ -286,34 +286,6 @@
   font-weight: 400;
   font-display: swap;
 }
-@font-face {
-  font-family: Redonda;
-  src: url(/assets/fonts/redonda-regular.otf) format("opentype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: Redonda;
-  src: url(/assets/fonts/redonda-medium.otf) format("opentype");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: Redonda;
-  src: url(/assets/fonts/redonda-italic.otf) format("opentype");
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: Redonda;
-  src: url(/assets/fonts/redonda-medium-italic.otf) format("opentype");
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-}
 :root {
   --off-white: #eeeadf;
   --cream: color-mix(in srgb, #999a83 30%, #eeeadf);
@@ -339,7 +311,7 @@ body {
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  font-family: Redonda, Arial, sans-serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 16px;
   line-height: 1.65;
 }
@@ -347,7 +319,7 @@ body,
 button,
 a,
 summary {
-  font-family: Redonda, Arial, sans-serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
 }
 ::selection {
   background: var(--sage);
@@ -407,7 +379,7 @@ h2 em,
 h3 em {
   color: var(--taupe);
   letter-spacing: -0.03em;
-  font-family: var(--font-apoio), Arial, sans-serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
 }

@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 import "./identidade.css";
+
+// Fonte de apoio: palavras de destaque dos títulos e slogan.
+const urbanist = Urbanist({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400"],
+  variable: "--font-apoio",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Clínica Rita Sudbrack | Estética Facial e Cuidados com a Pele",
@@ -25,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={urbanist.variable}>
       <body>{children}</body>
     </html>
   );

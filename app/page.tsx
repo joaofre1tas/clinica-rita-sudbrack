@@ -1,36 +1,17 @@
 import ResultsCarousel from "./components/ResultsCarousel";
 import SymeSignature from "./components/SymeSignature";
+import EditorialHero from "./components/EditorialHero";
+import "./hero.css";
 
 export default function HomePage() {
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Clínica Rita Sudbrack">
-          <img src="/assets/logo.svg" alt="Clínica Rita Sudbrack" />
-        </a>
-        <nav className="desktop-nav" aria-label="Navegação principal">
-          <a href="#sobre">{"Sobre"}</a>
-          <a href="#diferenciais">{"Diferenciais"}</a>
-          <a href="#tratamentos">{"Tratamentos"}</a>
-          <a href="#cursos">{"Cursos"}</a>
-          <a href="#resultados">{"Resultados"}</a>
-          <a href="#clinica">{"A Clínica"}</a>
-          <a href="#duvidas">{"Dúvidas"}</a>
-        </nav>
-        <a
-          className="header-cta"
-          href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-          target="_blank"
-          rel="noreferrer"
-        >
-          {"Agendar avaliação "}
-          <span className="button-icon" aria-hidden="true">
-            <img src="/assets/whatsapp.svg" alt="" />
-          </span>
-        </a>
-        <details className="mobile-menu">
-          <summary aria-label="Abrir menu">{"Menu"}</summary>
-          <nav aria-label="Navegação para celular">
+      <div className="hero-masthead">
+        <header className="site-header site-header--editorial">
+          <a className="brand" href="#inicio" aria-label="Clínica Rita Sudbrack">
+            <img src="/assets/logo.svg" alt="Clínica Rita Sudbrack" />
+          </a>
+          <nav className="desktop-nav" aria-label="Navegação principal">
             <a href="#sobre">{"Sobre"}</a>
             <a href="#diferenciais">{"Diferenciais"}</a>
             <a href="#tratamentos">{"Tratamentos"}</a>
@@ -38,70 +19,40 @@ export default function HomePage() {
             <a href="#resultados">{"Resultados"}</a>
             <a href="#clinica">{"A Clínica"}</a>
             <a href="#duvidas">{"Dúvidas"}</a>
-            <a
-              href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-              target="_blank"
-              rel="noreferrer"
-            >
-              {"Agendar avaliação"}
-            </a>
           </nav>
-        </details>
-      </header>
-      <section className="hero section-shell" id="inicio">
-        <div className="hero-copy">
-          <p className="eyebrow">{"Estética facial • Santa Cruz do Sul"}</p>
-          <h1>
-            {"Cuidado especializado para uma pele mais"}{" "}
-            <em>{"saudável, bonita e natural"}</em>
-          </h1>
-          <div className="hero-intro">
-            <p>{"Cada pele tem uma história."}</p>
-            <p>
-              {
-                "Por isso, cada tratamento começa com escuta, análise e um plano pensado de forma individual."
-              }
-            </p>
-          </div>
-          <p className="hero-description">
-            {
-              "Estética facial e saúde da pele caminham juntas para valorizar sua beleza sem excessos e sem apagar aquilo que torna você única."
-            }
-          </p>
-          <div className="hero-actions">
-            <a
-              className="button "
-              href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>{"Agendar minha avaliação"}</span>
-              <span className="button-icon" aria-hidden="true">
-                <img src="/assets/whatsapp.svg" alt="" />
-              </span>
-            </a>
-            <a className="text-link" href="#tratamentos">
-              {"Conhecer os tratamentos"}
-              <span className="text-link-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="presentation">
-                  <path d="M12 5v14M6 13l6 6 6-6" />
-                </svg>
-              </span>
-            </a>
-          </div>
-          <p className="credibility">
-            {
-              "Especialização em estética facial, melasma, manchas e cuidados personalizados para a pele."
-            }
-          </p>
-        </div>
-        <div className="hero-visual">
-          <div className="image-frame image-frame--hero">
-            <img src="/assets/images/rita-hero.webp" alt="Dra. Rita Sudbrack" />
-          </div>
-          <p className="image-caption">{"Naturalidade em cada detalhe."}</p>
-        </div>
-      </section>
+          <a
+            className="header-cta"
+            href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
+            target="_blank"
+            rel="noreferrer"
+          >
+            {"Agendar avaliação "}
+            <span className="button-icon" aria-hidden="true">
+              <img src="/assets/whatsapp.svg" alt="" />
+            </span>
+          </a>
+          <details className="mobile-menu">
+            <summary aria-label="Abrir menu">{"Menu"}</summary>
+            <nav aria-label="Navegação para celular">
+              <a href="#sobre">{"Sobre"}</a>
+              <a href="#diferenciais">{"Diferenciais"}</a>
+              <a href="#tratamentos">{"Tratamentos"}</a>
+              <a href="#cursos">{"Cursos"}</a>
+              <a href="#resultados">{"Resultados"}</a>
+              <a href="#clinica">{"A Clínica"}</a>
+              <a href="#duvidas">{"Dúvidas"}</a>
+              <a
+                href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
+                target="_blank"
+                rel="noreferrer"
+              >
+                {"Agendar avaliação"}
+              </a>
+            </nav>
+          </details>
+        </header>
+        <EditorialHero />
+      </div>
       <div className="marquee" aria-hidden="true">
         <div className="marquee-track">
           <div className="marquee-group">

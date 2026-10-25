@@ -84,7 +84,8 @@
     "Na prévia bege, remover a régua e os textos pequenos do rodapé do hero e a faixa animada seguinte, conforme pedido do usuário. Reposicionar o conteúdo na base, estender a camada fotográfica de luz para além das bordas para eliminar a emenda vertical e recuperar a luminosidade sobre o blazer. Manter a foto do usuário e a versão verde.",
     "Após esclarecer que prefere o primeiro ponto dourado sobre o blazer, substituir o véu amplo da prévia bege por um reflexo champagne localizado, curvo e difuso, guiado pela referência. Desenhar a camada decorativa em SVG transparente com desfoque e deslocamento orgânico; manter o retrato fornecido pelo usuário, a base limpa e a variante verde. Prévia com atualização automática na porta 4175, preservando os servidores anteriores.",
     "Na prévia bege no mobile, centralizar Rita e Sudbrack com a mesma largura visual, ajustando Rita para 2.3 vezes o corpo do sobrenome. Aumentar o entrelinhamento de 0.86 para 1.08 e adicionar um intervalo de 12 a 20 px entre as palavras. Validado em 390 px: larguras de 333.81 e 333.92 px, sem overflow. Preservar o desktop e a versão verde.",
-    "Refino do nome no mobile após feedback: reduzir o espaço entre Rita e Sudbrack para apenas um respiro, usando gap de 4 px e line-height de 0.9; manter as duas palavras com a mesma largura visual."
+    "Refino do nome no mobile após feedback: reduzir o espaço entre Rita e Sudbrack para apenas um respiro, usando gap de 4 px e line-height de 0.9; manter as duas palavras com a mesma largura visual.",
+    "Em 24/10/2026, o usuário aprovou a versão bege final e autorizou commit e push. Promover a variante bege para a página inicial em main, preservar o endereço de prévia sem indexação e a versão verde na branch design/rita-hero-verde."
   ],
   "evidence": [
     {

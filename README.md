@@ -1,6 +1,6 @@
 # Clínica Rita Sudbrack
 
-Site da clínica em Next.js, com imagens e fontes incluídas no projeto. Esta branch reproduz a versão publicada em https://clinicaritasudbrack.symewebstudio.com/ em 10/10/2026: o conteúdo, os estilos e as imagens foram recuperados do site público, e os componentes interativos foram reconstruídos em React porque a recuperação autenticada do código-fonte do Sites ficou bloqueada nesta sessão. O gerador de certificados em `/certificados` também está incluído e funciona no navegador.
+Site da clínica em Next.js, com imagens e fontes incluídas no projeto. A página inicial usa o hero bege aprovado em 24/10/2026, com o retrato tratado pelo usuário e o reflexo champagne. A versão verde permanece na branch `design/rita-hero-verde`. O gerador de certificados em `/certificados` também está incluído e funciona no navegador.
 
 ## Rodar no computador
 
@@ -23,7 +23,7 @@ npm start
 ## Publicar na Vercel
 
 1. Na Vercel, escolha **Add New → Project** e importe `joaofre1tas/clinica-rita-sudbrack`.
-2. Selecione a branch `deploy/vercel-ready` para o deploy desta versão. Para torná-la a versão de produção de um projeto já conectado, selecione essa branch como **Production Branch** nas configurações de Git do projeto.
+2. Selecione a branch `main` para o deploy da versão aprovada. Para torná-la a versão de produção de um projeto já conectado, selecione essa branch como **Production Branch** nas configurações de Git do projeto.
 3. Use **Next.js** como framework e a raiz do repositório como **Root Directory**.
 4. Use Node.js **22.x**. A configuração incluída define **Install Command** como `npm ci` e **Build Command** como `npm run build`. Deixe **Output Directory** no padrão do Next.js.
 5. Clique em **Deploy**. Depois, adicione o domínio em **Settings → Domains**, se desejar.
@@ -34,7 +34,10 @@ Guia oficial: https://vercel.com/docs/frameworks/full-stack/nextjs
 
 ## Conteúdo e arquivos
 
-- `app/page.tsx`: conteúdo da página inicial.
+- `app/page.tsx`: página inicial com o hero bege aprovado.
+- `app/components/ClinicHome.tsx`: conteúdo compartilhado da página inicial.
+- `app/components/EditorialHero.tsx` e `app/hero.css`: composição e estilos do hero.
+- `app/previa-bege/`: endereço de prévia preservado, sem indexação.
 - `app/globals.css`: estilos, cores e fontes.
 - `public/assets/`: logo, imagens e fontes.
 - `app/components/ResultsCarousel.tsx`: carrossel com nove comparações de antes e depois.

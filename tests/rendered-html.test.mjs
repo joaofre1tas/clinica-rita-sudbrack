@@ -12,6 +12,8 @@ test("a página inicial de produção mantém conteúdo, contato e arquivos loca
   assert.match(html, /Clínica Rita Sudbrack/);
   assert.match(html, /lang="pt-BR"/);
   assert.match(html, /https:\/\/wa\.me\/5551995599459/);
+  assert.match(html, /src="\/assets\/images\/rita-hero-bege\.webp"/);
+  assert.doesNotMatch(html, /name="robots" content="noindex/);
   assert.doesNotMatch(html, /name="codex-preview"/);
   const images = [...html.matchAll(/src="(\/assets\/[^"?]+)"/g)];
   assert.ok(images.length > 0, "as imagens da clínica devem estar presentes");

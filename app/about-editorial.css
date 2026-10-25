@@ -1,19 +1,8 @@
 .about-editorial {
-  --about-muted: color-mix(in srgb, var(--off-white) 72%, var(--brown));
-  background: var(--brown);
-  color: var(--off-white);
-  position: relative;
-  isolation: isolate;
+  --about-muted: color-mix(in srgb, var(--brown) 76%, var(--off-white));
+  background: var(--off-white);
+  color: var(--brown);
   scroll-margin-top: -96px;
-}
-
-.about-editorial::before {
-  content: "";
-  position: absolute;
-  inset: -40px 0 auto;
-  height: 40px;
-  background: linear-gradient(transparent, var(--brown));
-  pointer-events: none;
 }
 
 .about-editorial-shell {
@@ -35,8 +24,6 @@
 .about-editorial-photo {
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  mask-image: linear-gradient(#000 84%, transparent);
-  -webkit-mask-image: linear-gradient(#000 84%, transparent);
 }
 
 .about-editorial-photo img {
@@ -51,7 +38,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  margin-top: -6px;
+  margin-top: 24px;
   position: relative;
 }
 
@@ -83,7 +70,7 @@
 }
 
 .about-editorial h2 {
-  color: var(--off-white);
+  color: var(--brown);
   font-size: clamp(2.9rem, 4.05vw, 3.65rem);
   line-height: 1.06 !important;
   letter-spacing: -0.035em;
@@ -93,7 +80,7 @@
 .about-editorial h2 > span {
   display: block;
   margin-top: 0.16em;
-  color: color-mix(in srgb, var(--taupe) 52%, var(--off-white));
+  color: color-mix(in srgb, var(--brown) 55%, var(--taupe));
 }
 
 .about-editorial-story {
@@ -107,7 +94,7 @@
 }
 
 .about-editorial-story > p:first-child {
-  color: var(--off-white);
+  color: var(--brown);
 }
 
 .about-editorial-link {
@@ -127,14 +114,14 @@
   place-items: center;
   width: 42px;
   height: 42px;
-  border: 1px solid color-mix(in srgb, var(--off-white) 35%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brown) 35%, transparent);
   border-radius: 50%;
   transition: background 180ms ease, color 180ms ease;
 }
 
 .about-editorial-link:hover > span {
-  background: var(--off-white);
-  color: var(--brown);
+  background: var(--brown);
+  color: var(--off-white);
 }
 
 .about-editorial-link svg {

@@ -69,7 +69,8 @@
     "must": [
       "Preservar a identidade da clínica: Andine, Urbanist, creme, sálvia e marrom.",
       "Usar as fotografias reais da Rita e preservar os links de agendamento existentes.",
-      "Refazer uma seção por vez para revisão, preservando o hero bege aprovado e o site principal."
+      "Refazer uma seção por vez para revisão, preservando o hero bege aprovado e o site principal.",
+      "Manter fundo claro nas seções abaixo do hero, sem degradês de transição entre seções."
     ],
     "avoid": []
   },
@@ -86,7 +87,8 @@
     "Na prévia bege no mobile, centralizar Rita e Sudbrack com a mesma largura visual, ajustando Rita para 2.3 vezes o corpo do sobrenome. Aumentar o entrelinhamento de 0.86 para 1.08 e adicionar um intervalo de 12 a 20 px entre as palavras. Validado em 390 px: larguras de 333.81 e 333.92 px, sem overflow. Preservar o desktop e a versão verde.",
     "Refino do nome no mobile após feedback: reduzir o espaço entre Rita e Sudbrack para apenas um respiro, usando gap de 4 px e line-height de 0.9; manter as duas palavras com a mesma largura visual.",
     "Em 24/10/2026, o usuário aprovou a versão bege final e autorizou commit e push. Promover a variante bege para a página inicial em main, preservar o endereço de prévia sem indexação e a versão verde na branch design/rita-hero-verde.",
-    "Após aprovar o hero, o usuário pediu o redesenho do restante da página e escolheu revisar uma seção por vez. Começar pela seção Sobre em /previa-secoes, sem substituir main ou /previa-bege. Usar a fotografia real junto à janela, fundo marrom contínuo com o hero, tipografia Andine e Urbanist, cores creme/taupe e uma área clara para propósito e depoimento. Preservar o conteúdo e os princípios existentes, simplificando o checklist visual."
+    "Após aprovar o hero, o usuário pediu o redesenho do restante da página e escolheu revisar uma seção por vez. Começar pela seção Sobre em /previa-secoes, sem substituir main ou /previa-bege. Usar a fotografia real junto à janela, fundo marrom contínuo com o hero, tipografia Andine e Urbanist, cores creme/taupe e uma área clara para propósito e depoimento. Preservar o conteúdo e os princípios existentes, simplificando o checklist visual.",
+    "Correção após feedback do usuário: rejeitada a seção Sobre marrom e o degradê de transição. Usar fundo creme uniforme, textos em marrom/taupe, fotografia com bordas naturais e nenhuma máscara de degradê. A referência visual do hero deve orientar a tipografia e a paleta clara das próximas seções."
   ],
   "evidence": [
     {

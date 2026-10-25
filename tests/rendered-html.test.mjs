@@ -43,6 +43,20 @@ test("o gerador de certificados é compilado com os arquivos necessários", asyn
   assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
 });
 
+test("a nova seção Sobre fica isolada na prévia sem substituir o site aprovado", async () => {
+  const [home, preview] = await Promise.all([
+    readFile(new URL(".next/server/app/index.html", root), "utf8"),
+    readFile(new URL(".next/server/app/previa-secoes.html", root), "utf8"),
+  ]);
+  assert.doesNotMatch(home, /class="about-editorial"/);
+  assert.match(home, /class="about section-shell"/);
+  assert.match(preview, /class="about-editorial"/);
+  assert.match(preview, /A profissional por trás do cuidado/);
+  assert.match(preview, /name="robots" content="noindex, nofollow"/);
+  assert.match(preview, /src="\/assets\/images\/rita-hero-bege\.webp"/);
+  assert.match(preview, /src="\/assets\/images\/rita-sobre\.webp"/);
+});
+
 test("a página do curso e todas as nove comparações estão incluídas", async () => {
   const html = await readFile(
     new URL(".next/server/app/cursos/design-de-sobrancelhas.html", root),

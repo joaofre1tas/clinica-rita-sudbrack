@@ -1,12 +1,15 @@
 import ResultsCarousel from "./ResultsCarousel";
 import SymeSignature from "./SymeSignature";
 import EditorialHero from "./EditorialHero";
+import EditorialAbout from "./EditorialAbout";
 import "../hero.css";
 
 export default function ClinicHome({
   heroVariant = "green",
+  aboutVariant = "original",
 }: {
   heroVariant?: "green" | "beige";
+  aboutVariant?: "original" | "editorial";
 }) {
   return (
     <main>
@@ -89,126 +92,130 @@ export default function ClinicHome({
           </div>
         </div>
       )}
-      <section className="about section-shell" id="sobre">
-        <div className="about-layout">
-          <div className="about-copy">
-            <div className="about-intro">
-              <p className="eyebrow">{"Sobre a Dra. Rita Sudbrack"}</p>
-              <h2>
-                {"Conhecimento para orientar. "}
-                <em>{"Sensibilidade"}</em>
-                {" para compreender."}
-              </h2>
+      {aboutVariant === "editorial" ? (
+        <EditorialAbout />
+      ) : (
+        <section className="about section-shell" id="sobre">
+          <div className="about-layout">
+            <div className="about-copy">
+              <div className="about-intro">
+                <p className="eyebrow">{"Sobre a Dra. Rita Sudbrack"}</p>
+                <h2>
+                  {"Conhecimento para orientar. "}
+                  <em>{"Sensibilidade"}</em>
+                  {" para compreender."}
+                </h2>
+              </div>
+              <p className="lead">
+                {
+                  "Rita Sudbrack acredita que cuidar da aparência também é cuidar da forma como uma mulher se percebe."
+                }
+              </p>
+              <p>
+                {
+                  "Por isso, seu trabalho não começa pela indicação de um procedimento. Começa pela compreensão de cada paciente."
+                }
+              </p>
+              <p>
+                {
+                  "Necessidades, histórico, rotina, expectativas e características da pele são consideradas antes da definição de qualquer tratamento. Assim, o cuidado se torna mais consciente, individual e coerente com o resultado desejado."
+                }
+              </p>
+              <div className="short-lines" aria-label="Princípios do atendimento">
+                <span>{"Sem exageros."}</span>
+                <span>{"Sem recomendações automáticas."}</span>
+                <span>{"Sem padrões que apagam sua individualidade."}</span>
+              </div>
             </div>
-            <p className="lead">
-              {
-                "Rita Sudbrack acredita que cuidar da aparência também é cuidar da forma como uma mulher se percebe."
-              }
-            </p>
-            <p>
-              {
-                "Por isso, seu trabalho não começa pela indicação de um procedimento. Começa pela compreensão de cada paciente."
-              }
-            </p>
-            <p>
-              {
-                "Necessidades, histórico, rotina, expectativas e características da pele são consideradas antes da definição de qualquer tratamento. Assim, o cuidado se torna mais consciente, individual e coerente com o resultado desejado."
-              }
-            </p>
-            <div className="short-lines" aria-label="Princípios do atendimento">
-              <span>{"Sem exageros."}</span>
-              <span>{"Sem recomendações automáticas."}</span>
-              <span>{"Sem padrões que apagam sua individualidade."}</span>
+            <div className="about-visual">
+              <div className="image-frame image-frame--consultation">
+                <img
+                  src="/assets/images/rita-sobre.webp"
+                  alt="Dra. Rita Sudbrack em retrato profissional"
+                />
+              </div>
             </div>
           </div>
-          <div className="about-visual">
-            <div className="image-frame image-frame--consultation">
-              <img
-                src="/assets/images/rita-sobre.webp"
-                alt="Dra. Rita Sudbrack em retrato profissional"
-              />
+          <div className="purpose-grid">
+            <div>
+              <p className="eyebrow">{"Estética com propósito"}</p>
+              <h3>
+                {
+                  "Um bom tratamento respeita os traços e contribui para uma relação mais positiva com a própria imagem."
+                }
+              </h3>
             </div>
+            <ul className="clean-list">
+              <li>
+                <span className="clinic-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="m6 12 4 4 8-9" />
+                  </svg>
+                </span>
+                <span>{"Conhecimento técnico"}</span>
+              </li>
+              <li>
+                <span className="clinic-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="m6 12 4 4 8-9" />
+                  </svg>
+                </span>
+                <span>{"Escuta cuidadosa"}</span>
+              </li>
+              <li>
+                <span className="clinic-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="m6 12 4 4 8-9" />
+                  </svg>
+                </span>
+                <span>{"Planejamento individual"}</span>
+              </li>
+              <li>
+                <span className="clinic-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="m6 12 4 4 8-9" />
+                  </svg>
+                </span>
+                <span>{"Comunicação clara"}</span>
+              </li>
+              <li>
+                <span className="clinic-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="m6 12 4 4 8-9" />
+                  </svg>
+                </span>
+                <span>{"Acompanhamento próximo"}</span>
+              </li>
+              <li>
+                <span className="clinic-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="m6 12 4 4 8-9" />
+                  </svg>
+                </span>
+                <span>{"Respeito ao tempo de cada pele"}</span>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div className="purpose-grid">
-          <div>
-            <p className="eyebrow">{"Estética com propósito"}</p>
-            <h3>
-              {
-                "Um bom tratamento respeita os traços e contribui para uma relação mais positiva com a própria imagem."
-              }
-            </h3>
-          </div>
-          <ul className="clean-list">
-            <li>
-              <span className="clinic-feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="presentation">
-                  <path d="m6 12 4 4 8-9" />
-                </svg>
-              </span>
-              <span>{"Conhecimento técnico"}</span>
-            </li>
-            <li>
-              <span className="clinic-feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="presentation">
-                  <path d="m6 12 4 4 8-9" />
-                </svg>
-              </span>
-              <span>{"Escuta cuidadosa"}</span>
-            </li>
-            <li>
-              <span className="clinic-feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="presentation">
-                  <path d="m6 12 4 4 8-9" />
-                </svg>
-              </span>
-              <span>{"Planejamento individual"}</span>
-            </li>
-            <li>
-              <span className="clinic-feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="presentation">
-                  <path d="m6 12 4 4 8-9" />
-                </svg>
-              </span>
-              <span>{"Comunicação clara"}</span>
-            </li>
-            <li>
-              <span className="clinic-feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="presentation">
-                  <path d="m6 12 4 4 8-9" />
-                </svg>
-              </span>
-              <span>{"Acompanhamento próximo"}</span>
-            </li>
-            <li>
-              <span className="clinic-feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="presentation">
-                  <path d="m6 12 4 4 8-9" />
-                </svg>
-              </span>
-              <span>{"Respeito ao tempo de cada pele"}</span>
-            </li>
-          </ul>
-        </div>
-        <blockquote className="quote-block">
-          <span className="quote-mark" aria-hidden="true">
-            {"“"}
-          </span>
-          <p>
-            {
-              "Minha missão é cuidar da sua pele com atenção, conhecimento e respeito à sua individualidade, para que você se sinta bonita sem deixar de ser você."
-            }
-          </p>
-          <footer>
-            <strong>{"Rita Sudbrack"}</strong>
-            <span>
-              {
-                "Esteticista e cosmetóloga • Especialista em estética facial • atuação desde 2016"
-              }
+          <blockquote className="quote-block">
+            <span className="quote-mark" aria-hidden="true">
+              {"“"}
             </span>
-          </footer>
-        </blockquote>
-      </section>
+            <p>
+              {
+                "Minha missão é cuidar da sua pele com atenção, conhecimento e respeito à sua individualidade, para que você se sinta bonita sem deixar de ser você."
+              }
+            </p>
+            <footer>
+              <strong>{"Rita Sudbrack"}</strong>
+              <span>
+                {
+                  "Esteticista e cosmetóloga • Especialista em estética facial • atuação desde 2016"
+                }
+              </span>
+            </footer>
+          </blockquote>
+        </section>
+      )}
       <section className="method" id="diferenciais">
         <div className="section-shell">
           <div className="section-heading section-heading--split">

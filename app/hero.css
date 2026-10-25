@@ -414,8 +414,8 @@ main[data-hero-visible="true"] > .floating-whatsapp {
   }
 
   .hero-masthead--beige .hero-editorial-name {
-    gap: clamp(12px, 3.5vw, 20px);
-    line-height: 1.08;
+    gap: 4px;
+    line-height: 0.9;
   }
 
   .hero-masthead--beige .hero-editorial-name > span:first-child {

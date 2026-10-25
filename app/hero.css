@@ -146,15 +146,19 @@
   -webkit-mask-image: linear-gradient(163deg, transparent 48%, #0000003b 56%, #000000bf 64%, #0000005c 72%, transparent 82%);
 }
 
-/* As bordas da textura ficam fora da composição para não criar emendas. */
+/* Reflexo champagne em curva, com bordas difusas e fundo transparente. */
 .hero-masthead--beige .hero-editorial-veil {
-  inset: -64px;
-  background-position: right bottom;
-  background-size: 240% 180%;
-  filter: blur(32px) saturate(0.85);
-  opacity: 0.5;
-  mask-image: linear-gradient(160deg, transparent 42%, #00000099 55%, #000 65%, #00000080 74%, transparent 86%);
-  -webkit-mask-image: linear-gradient(160deg, transparent 42%, #00000099 55%, #000 65%, #00000080 74%, transparent 86%);
+  inset: auto;
+  left: 55%;
+  top: 79%;
+  width: min(46vw, 640px);
+  aspect-ratio: 8 / 5;
+  transform: translate(-50%, -50%);
+  background: url('/assets/images/hero-luz-champagne.svg') center / contain no-repeat;
+  filter: none;
+  opacity: 0.86;
+  mask-image: none;
+  -webkit-mask-image: none;
 }
 
 .hero-masthead--beige .hero-editorial-content {
@@ -433,12 +437,14 @@ main[data-hero-visible="true"] > .floating-whatsapp {
   }
 
   .hero-masthead--beige .hero-editorial-veil {
-    inset: -48px;
-    background-size: 270% 140%;
-    filter: blur(26px) saturate(0.8);
-    opacity: 0.4;
-    mask-image: linear-gradient(164deg, transparent 35%, #00000080 46%, #000000bf 54%, transparent 68%);
-    -webkit-mask-image: linear-gradient(164deg, transparent 35%, #00000080 46%, #000000bf 54%, transparent 68%);
+    inset: auto;
+    left: 55%;
+    top: 50%;
+    width: min(105vw, 440px);
+    filter: none;
+    opacity: 0.66;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 
   .hero-editorial-shade {

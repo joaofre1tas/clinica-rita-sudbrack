@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <defs>
+    <linearGradient id="haze" x1="85" y1="200" x2="570" y2="345" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C6A774" stop-opacity="0"/>
+      <stop offset=".3" stop-color="#E1C48D" stop-opacity=".42"/>
+      <stop offset=".53" stop-color="#F1DDAA" stop-opacity=".56"/>
+      <stop offset=".78" stop-color="#D5B47C" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#D5B47C" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glint" x1="150" y1="165" x2="520" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D0AC6D" stop-opacity="0"/>
+      <stop offset=".3" stop-color="#F5DEAA" stop-opacity=".7"/>
+      <stop offset=".48" stop-color="#FFF0C8" stop-opacity=".9"/>
+      <stop offset=".69" stop-color="#E5C58C" stop-opacity=".54"/>
+      <stop offset="1" stop-color="#C7A774" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft-haze" x="0" y="0" width="640" height="400" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="soft-glint" x="0" y="0" width="640" height="400" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".009 .018" numOctaves="2" seed="11" result="flow"/>
+      <feDisplacementMap in="SourceGraphic" in2="flow" scale="35" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+  <path d="M70 252C175 168 254 158 328 203C402 248 420 298 562 336" stroke="url(#haze)" stroke-width="112" stroke-linecap="round" filter="url(#soft-haze)"/>
+  <path d="M145 238C222 173 275 173 332 207C388 239 403 279 480 315" stroke="url(#glint)" stroke-width="66" stroke-linecap="round" filter="url(#soft-glint)"/>
+</svg>

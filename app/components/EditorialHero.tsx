@@ -92,16 +92,18 @@ export default function EditorialHero({
         </div>
       </div>
 
-      <div className="hero-editorial-footnote">
-        <span>Conhecimento. Sensibilidade. Você.</span>
-        <a href="#sobre" aria-label="Conheça a Rita Sudbrack">
-          <span>Conheça a Rita</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 5v14m-6-6 6 6 6-6" />
-          </svg>
-        </a>
-        <span>Beleza sem excessos.</span>
-      </div>
+      {variant === "green" && (
+        <div className="hero-editorial-footnote">
+          <span>Conhecimento. Sensibilidade. Você.</span>
+          <a href="#sobre" aria-label="Conheça a Rita Sudbrack">
+            <span>Conheça a Rita</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 5v14m-6-6 6 6 6-6" />
+            </svg>
+          </a>
+          <span>Beleza sem excessos.</span>
+        </div>
+      )}
     </section>
   );
 }

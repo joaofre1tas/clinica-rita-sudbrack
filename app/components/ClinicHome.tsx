@@ -63,30 +63,32 @@ export default function ClinicHome({
         </header>
         <EditorialHero variant={heroVariant} />
       </div>
-      <div className="marquee" aria-hidden="true">
-        <div className="marquee-track">
-          <div className="marquee-group">
-            <span>{"CUIDADO INDIVIDUAL"}</span>
-            <i>{"•"}</i>
-            <span>{"PELE SAUDÁVEL"}</span>
-            <i>{"•"}</i>
-            <span>{"BELEZA SEM EXCESSOS"}</span>
-            <i>{"•"}</i>
-            <span>{"NATURALIDADE"}</span>
-            <i>{"•"}</i>
-          </div>
-          <div className="marquee-group">
-            <span>{"CUIDADO INDIVIDUAL"}</span>
-            <i>{"•"}</i>
-            <span>{"PELE SAUDÁVEL"}</span>
-            <i>{"•"}</i>
-            <span>{"BELEZA SEM EXCESSOS"}</span>
-            <i>{"•"}</i>
-            <span>{"NATURALIDADE"}</span>
-            <i>{"•"}</i>
+      {heroVariant === "green" && (
+        <div className="marquee" aria-hidden="true">
+          <div className="marquee-track">
+            <div className="marquee-group">
+              <span>{"CUIDADO INDIVIDUAL"}</span>
+              <i>{"•"}</i>
+              <span>{"PELE SAUDÁVEL"}</span>
+              <i>{"•"}</i>
+              <span>{"BELEZA SEM EXCESSOS"}</span>
+              <i>{"•"}</i>
+              <span>{"NATURALIDADE"}</span>
+              <i>{"•"}</i>
+            </div>
+            <div className="marquee-group">
+              <span>{"CUIDADO INDIVIDUAL"}</span>
+              <i>{"•"}</i>
+              <span>{"PELE SAUDÁVEL"}</span>
+              <i>{"•"}</i>
+              <span>{"BELEZA SEM EXCESSOS"}</span>
+              <i>{"•"}</i>
+              <span>{"NATURALIDADE"}</span>
+              <i>{"•"}</i>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <section className="about section-shell" id="sobre">
         <div className="about-layout">
           <div className="about-copy">

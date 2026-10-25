@@ -5,7 +5,11 @@ import { useEffect, useRef } from "react";
 const appointmentUrl =
   "https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.";
 
-export default function EditorialHero() {
+export default function EditorialHero({
+  variant = "green",
+}: {
+  variant?: "green" | "beige";
+}) {
   const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -40,7 +44,11 @@ export default function EditorialHero() {
 
       <img
         className="hero-editorial-portrait"
-        src="/assets/images/rita-hero-recorte.webp"
+        src={
+          variant === "beige"
+            ? "/assets/images/rita-hero-bege.webp"
+            : "/assets/images/rita-hero-recorte.webp"
+        }
         alt="Rita Sudbrack, esteticista e cosmetóloga"
         width="1024"
         height="1536"

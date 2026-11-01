@@ -367,23 +367,33 @@ button:focus-visible {
 }
 h1,
 h2,
-h3 {
-  color: var(--soft-black);
+.journey-heading h3,
+.course-copy h3,
+.course-subheading h3,
+.course-conversion h3,
+.melasma-card h3,
+.location-card h3 {
   letter-spacing: -0.035em;
   font-family: Andine, Georgia, serif;
   font-weight: 400;
+}
+h1,
+h2,
+h3 {
+  color: var(--soft-black);
   line-height: 1.04;
+}
+h3 {
+  letter-spacing: -0.015em;
+  font-family: var(--font-urbanist), Arial, sans-serif;
+  font-weight: 500;
 }
 h1 em,
 h2 em,
 h3 em {
   color: var(--taupe);
-  letter-spacing: -0.03em;
-  font-family: var(--font-urbanist), Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  /* A Urbanist tem métricas maiores que a Andine; sem isto a linha do destaque abre um vão. */
-  line-height: 0;
+  font: inherit;
+  letter-spacing: inherit;
 }
 h2 {
   font-size: clamp(3.25rem, 5.1vw, 5.85rem);
@@ -466,6 +476,7 @@ h2 {
   color: var(--brown);
   background: 0 0;
   border-color: #261d1652;
+  border-radius: 999px;
 }
 .button--outline:hover {
   color: var(--soft-black);
@@ -577,10 +588,6 @@ h2 {
   max-width: 820px;
   font-size: clamp(4.2rem, 6.2vw, 7.25rem);
 }
-.hero h1 em {
-  font-size: 0.82em;
-  display: inline;
-}
 .hero-intro {
   border-top: 1px solid var(--line);
   grid-template-columns: 0.75fr 1.45fr;
@@ -688,9 +695,9 @@ h2 {
   line-height: 1;
 }
 .hero-seal strong {
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 1.85rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 0.8;
 }
 .image-caption {
@@ -724,7 +731,7 @@ h2 {
 }
 .marquee span {
   letter-spacing: 0.02em;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: clamp(1.65rem, 2.2vw, 2.5rem);
 }
 .marquee i {
@@ -849,14 +856,14 @@ h2 {
 .quote-mark {
   height: 60px;
   color: var(--sage);
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 7rem;
   line-height: 1;
   display: block;
 }
 .quote-block > p {
   letter-spacing: -0.025em;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: clamp(2.25rem, 3.5vw, 4.25rem);
   line-height: 1.08;
 }
@@ -926,7 +933,7 @@ h2 {
 }
 .step-number {
   color: var(--taupe);
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 1.6rem;
   display: inline-flex;
 }
@@ -995,7 +1002,7 @@ h2 {
 .melasma-index {
   color: #eeeadfc7;
   letter-spacing: -0.08em;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: clamp(5rem, 8vw, 9rem);
   line-height: 0.8;
 }
@@ -1047,7 +1054,7 @@ h2 {
 }
 .treatment-number {
   color: var(--taupe);
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 1.5rem;
 }
 .treatment-card summary > span:nth-child(2) {
@@ -1059,9 +1066,9 @@ h2 {
 .treatment-card summary strong {
   color: var(--soft-black);
   letter-spacing: -0.03em;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: clamp(1.65rem, 2.35vw, 2.75rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.08;
 }
 .treatment-card summary small {
@@ -1443,7 +1450,7 @@ h2 {
 }
 .course-module-number {
   color: var(--taupe);
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 1.5rem;
 }
 .course-module-intro {
@@ -1454,9 +1461,9 @@ h2 {
 .course-module-intro strong {
   color: var(--soft-black);
   letter-spacing: -0.03em;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: clamp(1.8rem, 2.4vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
 }
 .course-module-intro small {
@@ -1549,7 +1556,7 @@ h2 {
 }
 .course-info-index {
   color: #9a907f85;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 1.05rem;
   position: absolute;
   top: 18px;
@@ -1562,9 +1569,9 @@ h2 {
   color: var(--brown);
   letter-spacing: -0.025em;
   margin-top: 44px;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 1.75rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.05;
   display: block;
 }
@@ -1737,9 +1744,9 @@ h2 {
   color: var(--brown);
   letter-spacing: -0.025em;
   margin-top: 38px;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 1.65rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.05;
   display: block;
 }
@@ -2158,16 +2165,16 @@ h2 {
 }
 .journey li > span {
   color: var(--taupe);
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 1.4rem;
 }
 .journey h4 {
   color: var(--soft-black);
   letter-spacing: -0.025em;
   margin: 0;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 2.2rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
 }
 .journey li p {
@@ -2288,7 +2295,7 @@ h2 {
   color: #eeeadf09;
   letter-spacing: -0.13em;
   pointer-events: none;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 36vw;
   line-height: 0.75;
   position: absolute;
@@ -2347,7 +2354,7 @@ h2 {
   max-width: 360px;
   color: var(--taupe);
   margin-top: 22px;
-  font-family: Andine, Georgia, serif;
+  font-family: var(--font-urbanist), Arial, sans-serif;
   font-size: 1.8rem;
   line-height: 1.1;
 }

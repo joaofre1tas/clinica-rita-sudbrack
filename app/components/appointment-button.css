@@ -1,0 +1,166 @@
+/* A classe .button continua no elemento para herdar a tipografia e o layout de cada seção. */
+.appointment-cta.button {
+  --cta-bg: var(--soft-black);
+  --cta-text: var(--off-white);
+  --cta-border: transparent;
+  --cta-hover: var(--sage);
+  --cta-hover-text: var(--soft-black);
+  --cta-height: 54px;
+
+  gap: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  border: 0;
+  background: none;
+  min-height: var(--cta-height);
+  padding: 0;
+  color: var(--cta-text);
+  transform: none;
+  transition: none;
+}
+
+.appointment-cta--light.button {
+  --cta-bg: var(--off-white);
+  --cta-text: var(--brown);
+}
+
+.appointment-cta--outline.button {
+  --cta-bg: transparent;
+  --cta-text: var(--brown);
+  --cta-border: color-mix(in srgb, var(--brown) 40%, transparent);
+}
+
+.appointment-cta--sm.button {
+  --cta-height: 44px;
+
+  font-size: 0.66rem;
+}
+
+.appointment-cta--full.button {
+  width: 100%;
+}
+
+.appointment-cta--header.button {
+  justify-self: end;
+}
+
+.appointment-cta-label,
+.appointment-cta-icon {
+  border: 1px solid var(--cta-border);
+  border-radius: 999px;
+  background: var(--cta-bg);
+  color: var(--cta-text);
+  transition:
+    background 0.5s ease-in-out,
+    border-color 0.5s ease-in-out,
+    color 0.5s ease-in-out;
+}
+
+.appointment-cta-label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 0;
+  padding: 10px 26px;
+}
+
+.appointment-cta--sm .appointment-cta-label {
+  padding: 8px 18px;
+}
+
+.appointment-cta-icon {
+  position: relative;
+  flex: 0 0 var(--cta-height);
+  width: var(--cta-height);
+  height: var(--cta-height);
+  align-self: center;
+  overflow: hidden;
+}
+
+.appointment-cta-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+  transition: transform 0.5s ease-in-out;
+}
+
+.appointment-cta-icon svg:last-child {
+  transform: translateX(calc(var(--cta-height) * -1));
+}
+
+.appointment-cta.button:focus-visible {
+  outline: 2px solid var(--taupe);
+  outline-offset: 4px;
+}
+
+/* O card de localização também é verde, mas o botão já é claro: o hover vai para o escuro. */
+.location-card .appointment-cta.button {
+  --cta-hover: var(--soft-black);
+  --cta-hover-text: var(--off-white);
+}
+
+@media (hover: hover) {
+  .appointment-cta.button:hover {
+    background: none;
+    color: var(--cta-text);
+    transform: none;
+  }
+
+  .appointment-cta:hover .appointment-cta-label,
+  .appointment-cta:hover .appointment-cta-icon {
+    border-color: var(--cta-hover);
+    background: var(--cta-hover);
+    color: var(--cta-hover-text);
+  }
+
+  .appointment-cta:hover .appointment-cta-icon svg:first-child {
+    transform: translateX(var(--cta-height));
+  }
+
+  .appointment-cta:hover .appointment-cta-icon svg:last-child {
+    transform: none;
+  }
+}
+
+.appointment-cta:focus-visible .appointment-cta-label,
+.appointment-cta:focus-visible .appointment-cta-icon {
+  border-color: var(--cta-hover);
+  background: var(--cta-hover);
+  color: var(--cta-hover-text);
+}
+
+.appointment-cta:focus-visible .appointment-cta-icon svg:first-child {
+  transform: translateX(var(--cta-height));
+}
+
+.appointment-cta:focus-visible .appointment-cta-icon svg:last-child {
+  transform: none;
+}
+
+@media (width<=920px) {
+  .appointment-cta--header.button {
+    display: none;
+  }
+}
+
+@media (width<=640px) {
+  .appointment-cta-label {
+    padding-inline: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .appointment-cta-label,
+  .appointment-cta-icon,
+  .appointment-cta-icon svg {
+    transition: none;
+  }
+}

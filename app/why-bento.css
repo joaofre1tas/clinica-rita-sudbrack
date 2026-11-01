@@ -1,0 +1,395 @@
+/* Só a grade respeita a altura da tela; o título da seção fica fora dessa conta. */
+.why-bento {
+  --tile: color-mix(in srgb, #999a83 16%, #eeeadf);
+
+  padding-block: 145px 0;
+  background: var(--off-white);
+}
+
+.why-bento-heading {
+  margin-bottom: 56px;
+}
+
+.why-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.14fr 0.92fr;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  height: min(calc(100svh - 40px), 840px);
+  min-height: 620px;
+}
+
+.why-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--tile);
+}
+
+.why-bento .why-tile h3 {
+  color: var(--soft-black);
+  font-size: clamp(1.2rem, 1.65vw, 1.55rem) !important;
+  line-height: 1.22 !important;
+}
+
+/* Antes e depois */
+.why-tile--result {
+  grid-row: 1 / 3;
+  background: var(--soft-black);
+}
+
+.why-compare-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% 50%;
+}
+
+.why-compare-after {
+  position: absolute;
+  inset: 0;
+}
+
+.why-compare-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #eeeadfd9;
+  color: var(--soft-black);
+  font-size: 0.74rem;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.why-compare-label--after {
+  right: 16px;
+  left: auto;
+}
+
+.why-compare-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 1px;
+  background: #eeeadfcc;
+  pointer-events: none;
+}
+
+.why-compare-handle {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: #eeeadfb3;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  place-items: center;
+}
+
+.why-compare-handle svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--soft-black);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+}
+
+.why-compare-range {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  touch-action: pan-y;
+}
+
+.why-compare-range:focus-visible + .why-result-caption {
+  outline: 2px solid var(--off-white);
+  outline-offset: 2px;
+}
+
+.why-result-caption {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
+  z-index: 2;
+  padding: 16px 18px;
+  border: 1px solid #eeeadf29;
+  border-radius: 16px;
+  background: #261d1659;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  pointer-events: none;
+}
+
+.why-bento .why-result-caption h3 {
+  color: var(--off-white);
+}
+
+/* Avaliação */
+.why-tile--evaluation {
+  grid-column: 1;
+  grid-row: 3;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 2svh, 18px);
+  padding: 18px 24px;
+  text-align: center;
+}
+
+.why-tile--evaluation .appointment-cta.button {
+  width: auto;
+  margin: 0;
+}
+
+/* Experiência acolhedora */
+.why-tile--welcome {
+  grid-column: 2;
+  grid-row: 1;
+  padding: clamp(16px, 2.6svh, 24px) 24px 0;
+}
+
+.why-tile--welcome h3 {
+  flex: none;
+  max-width: 300px;
+}
+
+.why-placeholder {
+  display: grid;
+  flex: 1;
+  min-height: 0;
+  margin: 12px -24px 0;
+  padding: 10px 24px;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #999a8326 0 10px,
+      transparent 10px 20px
+    ),
+    color-mix(in srgb, #999a83 34%, #eeeadf);
+  color: #261d16a6;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  text-align: center;
+  place-items: center;
+}
+
+/* Planejamento */
+.why-tile--plan {
+  grid-column: 2;
+  grid-row: 2;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.6svh, 14px);
+  padding: 14px 28px;
+  text-align: center;
+}
+
+.why-faces {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  min-height: 0;
+}
+
+.why-faces img {
+  width: clamp(52px, 8svh, 74px);
+  aspect-ratio: 1;
+  border: 3px solid var(--tile);
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.why-faces img:nth-child(2) {
+  z-index: 1;
+  width: clamp(68px, 11svh, 98px);
+  margin-inline: -14px;
+}
+
+/* Ambiente */
+.why-tile--space {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.why-tile--space img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.why-tile--space::after {
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, #261d16a6);
+  content: "";
+}
+
+.why-bento .why-tile--space h3 {
+  position: absolute;
+  bottom: 14px;
+  left: 20px;
+  z-index: 1;
+  color: var(--off-white);
+}
+
+/* Conhecimento */
+.why-tile--knowledge {
+  grid-column: 3;
+  grid-row: 1;
+  padding: clamp(16px, 2.6svh, 24px) 22px;
+}
+
+.why-since {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  color: #999a835c;
+  font-size: clamp(2.2rem, min(3.6vw, 7svh), 3.4rem);
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Lista final */
+.why-tile--care {
+  grid-column: 3;
+  grid-row: 2 / 4;
+  padding: 14px;
+}
+
+.why-tile--care ul {
+  display: grid;
+  flex: 1;
+  grid-auto-rows: 1fr;
+  gap: 10px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.why-tile--care li {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 16px;
+  background: var(--off-white);
+  color: var(--soft-black);
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* Melasma Control: faixa inteira abaixo da grade, com foto de fundo. */
+.why-bento .melasma-card {
+  margin-top: 16px;
+  border-radius: 24px;
+  background: var(--brown);
+}
+
+.why-bento .melasma-card::after {
+  display: none;
+}
+
+.why-bento .melasma-card > :not(.melasma-card-photo) {
+  position: relative;
+  z-index: 1;
+}
+
+.melasma-card-photo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 16px 20px;
+  background:
+    linear-gradient(100deg, #261d16c7, #261d1680 55%, #261d16a6),
+    repeating-linear-gradient(135deg, #eeeadf1f 0 10px, transparent 10px 20px),
+    var(--sage);
+  color: #eeeadf99;
+  font-size: 0.76rem;
+}
+
+/* Em telas estreitas a altura não comporta tudo empilhado: os blocos deslizam na horizontal. */
+@media (width<=920px) {
+  .why-bento {
+    padding-block: 84px 0;
+  }
+
+  .why-bento-heading {
+    margin-bottom: 32px;
+  }
+
+  .why-bento-grid {
+    display: flex;
+    gap: 12px;
+    height: min(calc(100svh - 32px), 520px);
+    min-height: 0;
+    margin-inline: calc((100% - 100vw) / 2);
+    padding-inline: calc((100vw - 100%) / 2);
+    overflow: auto hidden;
+    scroll-padding-inline: 15px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .why-bento-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .why-tile {
+    flex: 0 0 min(78vw, 330px);
+    scroll-snap-align: start;
+  }
+
+  .why-bento .why-tile h3 {
+    font-size: 1.4rem !important;
+  }
+
+  .why-tile--evaluation,
+  .why-tile--plan {
+    justify-content: center;
+  }
+
+  .why-bento .melasma-card {
+    padding-bottom: 76px;
+  }
+
+  .why-faces img {
+    width: 80px;
+  }
+
+  .why-faces img:nth-child(2) {
+    width: 112px;
+  }
+
+  .why-since {
+    font-size: 3.4rem;
+  }
+}

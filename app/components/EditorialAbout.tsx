@@ -1,14 +1,5 @@
 import "../about-editorial.css";
 
-const values = [
-  "Conhecimento técnico",
-  "Escuta cuidadosa",
-  "Planejamento individual",
-  "Comunicação clara",
-  "Acompanhamento próximo",
-  "Respeito ao tempo de cada pele",
-];
-
 export default function EditorialAbout() {
   return (
     <section className="about-editorial" id="sobre" aria-labelledby="about-editorial-title">
@@ -59,7 +50,7 @@ export default function EditorialAbout() {
               </p>
             </div>
 
-            <a className="about-editorial-link" href="#diferenciais">
+            <a className="about-editorial-link" href="#metodo">
               Conheça nosso método
               <span aria-hidden="true">
                 <svg viewBox="0 0 24 24">
@@ -67,40 +58,6 @@ export default function EditorialAbout() {
                 </svg>
               </span>
             </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="about-editorial-purpose">
-        <div className="about-editorial-shell about-editorial-purpose-layout">
-          <div className="about-editorial-values">
-            <p className="about-editorial-eyebrow">Estética com propósito</p>
-            <h3>
-              Um bom tratamento respeita os traços e contribui para uma relação
-              mais positiva com a própria imagem.
-            </h3>
-            <ul aria-label="Princípios do atendimento">
-              {values.map((value) => <li key={value}>{value}</li>)}
-            </ul>
-          </div>
-
-          <div className="about-editorial-belief">
-            <blockquote>
-              <p>
-                “Minha missão é cuidar da sua pele com atenção, conhecimento e
-                respeito à sua individualidade, para que você se sinta bonita sem
-                deixar de ser você.”
-              </p>
-              <footer>
-                <cite>Rita Sudbrack</cite>
-                <span>Atuação desde 2016</span>
-              </footer>
-            </blockquote>
-            <p className="about-editorial-promise">
-              Sem exageros. Sem recomendações automáticas.
-              <br />
-              Sem padrões que apagam sua individualidade.
-            </p>
           </div>
         </div>
       </div>

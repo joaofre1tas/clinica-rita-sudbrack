@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CourseModules from "./CourseModules";
 import SymeSignature from "../../components/SymeSignature";
+import AppointmentButton from "../../components/AppointmentButton";
 
 export const metadata: Metadata = {
   title: "Curso de Design de Sobrancelhas | Clínica Rita Sudbrack",
@@ -56,17 +57,9 @@ export default function CoursePage() {
               }
             </p>
             <div className="course-detail-actions">
-              <a
-                className="button "
-                href="https://wa.me/5551995599459?text=Ol%C3%A1!%20Gostaria%20de%20saber%20a%20data%20da%20pr%C3%B3xima%20turma%20e%20a%20disponibilidade%20de%20vagas%20para%20o%20Curso%20de%20Design%20de%20Sobrancelhas%20da%20Cl%C3%ADnica%20Rita%20Sudbrack.%20Tamb%C3%A9m%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20op%C3%A7%C3%B5es%20Normal%20e%20VIP%20e%20o%20parcelamento%20em%20at%C3%A9%2020x%20no%20cart%C3%A3o."
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>{"Quero informações sobre a próxima turma"}</span>
-                <span className="button-icon" aria-hidden="true">
-                  <img src="/assets/whatsapp.svg" alt="" />
-                </span>
-              </a>
+              <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1!%20Gostaria%20de%20saber%20a%20data%20da%20pr%C3%B3xima%20turma%20e%20a%20disponibilidade%20de%20vagas%20para%20o%20Curso%20de%20Design%20de%20Sobrancelhas%20da%20Cl%C3%ADnica%20Rita%20Sudbrack.%20Tamb%C3%A9m%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20op%C3%A7%C3%B5es%20Normal%20e%20VIP%20e%20o%20parcelamento%20em%20at%C3%A9%2020x%20no%20cart%C3%A3o.">
+                {"Quero informações sobre a próxima turma"}
+              </AppointmentButton>
               <a className="text-link" href="#conteudo">
                 {"Conhecer o conteúdo"}
                 <span className="text-link-icon" aria-hidden="true">
@@ -303,17 +296,9 @@ export default function CoursePage() {
                   "Consulte a data da próxima turma e confirme a disponibilidade de vagas diretamente com a equipe da Clínica Rita Sudbrack."
                 }
               </p>
-              <a
-                className="button button--light"
-                href="https://wa.me/5551995599459?text=Ol%C3%A1!%20Gostaria%20de%20saber%20a%20data%20da%20pr%C3%B3xima%20turma%20e%20a%20disponibilidade%20de%20vagas%20para%20o%20Curso%20de%20Design%20de%20Sobrancelhas%20da%20Cl%C3%ADnica%20Rita%20Sudbrack.%20Tamb%C3%A9m%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20op%C3%A7%C3%B5es%20Normal%20e%20VIP%20e%20o%20parcelamento%20em%20at%C3%A9%2020x%20no%20cart%C3%A3o."
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>{"Quero saber sobre a próxima turma"}</span>
-                <span className="button-icon" aria-hidden="true">
-                  <img src="/assets/whatsapp.svg" alt="" />
-                </span>
-              </a>
+              <AppointmentButton tone="light" href="https://wa.me/5551995599459?text=Ol%C3%A1!%20Gostaria%20de%20saber%20a%20data%20da%20pr%C3%B3xima%20turma%20e%20a%20disponibilidade%20de%20vagas%20para%20o%20Curso%20de%20Design%20de%20Sobrancelhas%20da%20Cl%C3%ADnica%20Rita%20Sudbrack.%20Tamb%C3%A9m%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20op%C3%A7%C3%B5es%20Normal%20e%20VIP%20e%20o%20parcelamento%20em%20at%C3%A9%2020x%20no%20cart%C3%A3o.">
+                {"Quero saber sobre a próxima turma"}
+              </AppointmentButton>
             </div>
           </div>
         </div>

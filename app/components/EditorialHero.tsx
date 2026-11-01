@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import AppointmentButton from "./AppointmentButton";
 
 const appointmentUrl =
   "https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.";
@@ -77,12 +78,13 @@ export default function EditorialHero({
             Cada pele tem uma história. Um cuidado personalizado para valorizar a
             sua, com conhecimento e naturalidade.
           </p>
-          <a className="hero-editorial-cta" href={appointmentUrl} target="_blank" rel="noreferrer">
+          <AppointmentButton
+            tone="light"
+            className="appointment-cta--full"
+            href={appointmentUrl}
+          >
             Agendar minha avaliação
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 12h14m-6-6 6 6-6 6" />
-            </svg>
-          </a>
+          </AppointmentButton>
           <a className="hero-editorial-link" href="#tratamentos">
             Conhecer os tratamentos
             <svg viewBox="0 0 24 24" aria-hidden="true">

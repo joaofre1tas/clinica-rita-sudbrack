@@ -2,6 +2,9 @@ import ResultsCarousel from "./ResultsCarousel";
 import SymeSignature from "./SymeSignature";
 import EditorialHero from "./EditorialHero";
 import EditorialAbout from "./EditorialAbout";
+import AppointmentButton from "./AppointmentButton";
+import MethodStage from "./MethodStage";
+import WhyBento from "./WhyBento";
 import "../hero.css";
 
 export default function ClinicHome({
@@ -33,17 +36,14 @@ export default function ClinicHome({
             <a href="#clinica">{"A Clínica"}</a>
             <a href="#duvidas">{"Dúvidas"}</a>
           </nav>
-          <a
-            className="header-cta"
+          <AppointmentButton
+            tone="outline"
+            size="sm"
+            className="appointment-cta--header"
             href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-            target="_blank"
-            rel="noreferrer"
           >
-            {"Agendar avaliação "}
-            <span className="button-icon" aria-hidden="true">
-              <img src="/assets/whatsapp.svg" alt="" />
-            </span>
-          </a>
+            {"Agendar avaliação"}
+          </AppointmentButton>
           <details className="mobile-menu">
             <summary aria-label="Abrir menu">{"Menu"}</summary>
             <nav aria-label="Navegação para celular">
@@ -216,153 +216,45 @@ export default function ClinicHome({
           </blockquote>
         </section>
       )}
-      <section className="method" id="diferenciais">
-        <div className="section-shell">
-          <div className="section-heading section-heading--split">
-            <div>
-              <p className="eyebrow">{"Nosso método"}</p>
-              <h2>
-                {"Sua pele não precisa de uma indicação "}
-                <em>{"genérica"}</em>
-              </h2>
-            </div>
+      <MethodStage />
+      <WhyBento>
+        <article className="melasma-card">
+          <div className="melasma-card-photo">
+            {/* Placeholder: trocar pela foto real quando existir. */}
+            <span>
+              Foto de fundo a incluir: pele em close ou Rita em atendimento,
+              formato horizontal, com área livre à direita
+            </span>
+          </div>
+          <div className="melasma-index" aria-hidden="true">
+            {"MC"}
+          </div>
+          <div>
+            <p className="eyebrow">{"Diferencial exclusivo"}</p>
+            <h3>{"Melasma Control"}</h3>
+          </div>
+          <div className="melasma-copy">
             <p>
               {
-                "O mesmo incômodo pode ter causas, intensidades e necessidades diferentes. Cada atendimento segue um processo para compreender, planejar, cuidar e acompanhar."
+                "Um método voltado ao cuidado individualizado de pacientes que convivem com melasma e manchas."
               }
             </p>
+            <p>
+              {
+                "Em vez de tratar todos os casos da mesma forma, considera o histórico, as características da pele, a intensidade do quadro e os fatores relacionados à sua evolução."
+              }
+            </p>
+            <p className="small-note">
+              {"A indicação e as etapas dependem de avaliação personalizada."}
+            </p>
+            <AppointmentButton
+                tone="light"
+                href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
+              {"Conhecer o Melasma Control"}
+            </AppointmentButton>
           </div>
-          <div className="steps-grid">
-            <article className="step-card">
-              <span className="step-number">
-                {"0"}
-                {"1"}
-              </span>
-              <h3>{"Compreensão da sua pele"}</h3>
-              <p>
-                {
-                  "O atendimento começa com uma conversa detalhada sobre suas queixas, histórico, rotina, cuidados atuais e objetivos. A pele é analisada com atenção para que a indicação não se limite ao que aparece na superfície."
-                }
-              </p>
-            </article>
-            <article className="step-card">
-              <span className="step-number">
-                {"0"}
-                {"2"}
-              </span>
-              <h3>{"Plano personalizado"}</h3>
-              <p>
-                {
-                  "Depois da avaliação, você conhece as possibilidades mais coerentes com o seu caso, entende o motivo de cada indicação e quais etapas podem fazer parte do processo."
-                }
-              </p>
-            </article>
-            <article className="step-card">
-              <span className="step-number">
-                {"0"}
-                {"3"}
-              </span>
-              <h3>{"Execução cuidadosa"}</h3>
-              <p>
-                {
-                  "Os procedimentos são realizados com atenção, segurança e respeito às características da sua pele, buscando uma evolução natural e compatível com você."
-                }
-              </p>
-            </article>
-            <article className="step-card">
-              <span className="step-number">
-                {"0"}
-                {"4"}
-              </span>
-              <h3>{"Acompanhamento da evolução"}</h3>
-              <p>
-                {
-                  "A resposta da pele é observada ao longo do processo. Quando necessário, orientações e etapas são ajustadas para acompanhar sua evolução com mais precisão."
-                }
-              </p>
-            </article>
-          </div>
-          <div className="differentials-layout">
-            <div>
-              <p className="eyebrow">{"Por que escolher a clínica"}</p>
-              <h3>{"Cuidado que considera você por inteiro."}</h3>
-            </div>
-            <ul className="check-list">
-              <li>
-                <span aria-hidden="true">{"✓"}</span>
-                {"Avaliação personalizada antes de qualquer indicação"}
-              </li>
-              <li>
-                <span aria-hidden="true">{"✓"}</span>
-                {"Planejamento conforme as necessidades reais da pele"}
-              </li>
-              <li>
-                <span aria-hidden="true">{"✓"}</span>
-                {"Resultados naturais e progressivos"}
-              </li>
-              <li>
-                <span aria-hidden="true">{"✓"}</span>
-                {"Comunicação baseada em conhecimento e saúde"}
-              </li>
-              <li>
-                <span aria-hidden="true">{"✓"}</span>
-                {"Acompanhamento durante o processo"}
-              </li>
-              <li>
-                <span aria-hidden="true">{"✓"}</span>
-                {"Experiência acolhedora e individualizada"}
-              </li>
-              <li>
-                <span aria-hidden="true">{"✓"}</span>
-                {"Ambiente confortável e reservado"}
-              </li>
-              <li>
-                <span aria-hidden="true">{"✓"}</span>
-                {"Método especializado para o controle do melasma"}
-              </li>
-              <li>
-                <span aria-hidden="true">{"✓"}</span>
-                {"Integração entre procedimentos e cuidados cotidianos"}
-              </li>
-            </ul>
-          </div>
-          <article className="melasma-card">
-            <div className="melasma-index" aria-hidden="true">
-              {"MC"}
-            </div>
-            <div>
-              <p className="eyebrow">{"Diferencial exclusivo"}</p>
-              <h3>{"Melasma Control"}</h3>
-            </div>
-            <div className="melasma-copy">
-              <p>
-                {
-                  "Um método voltado ao cuidado individualizado de pacientes que convivem com melasma e manchas."
-                }
-              </p>
-              <p>
-                {
-                  "Em vez de tratar todos os casos da mesma forma, considera o histórico, as características da pele, a intensidade do quadro e os fatores relacionados à sua evolução."
-                }
-              </p>
-              <p className="small-note">
-                {"A indicação e as etapas dependem de avaliação personalizada."}
-              </p>
-              <a
-                className="button "
-                href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>{"Conhecer o Melasma Control"}</span>
-                <span className="button-icon" aria-hidden="true">
-                  <img src="/assets/whatsapp.svg" alt="" />
-                </span>
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
+        </article>
+      </WhyBento>
       <section className="treatments section-shell" id="tratamentos">
         <div className="section-heading section-heading--split">
           <div>
@@ -425,17 +317,9 @@ export default function ClinicHome({
               </div>
               <div className="treatment-action">
                 <span>{"A indicação depende de avaliação."}</span>
-                <a
-                  className="button "
-                  href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{"Avaliação para manchas"}</span>
-                  <span className="button-icon" aria-hidden="true">
-                    <img src="/assets/whatsapp.svg" alt="" />
-                  </span>
-                </a>
+                <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
+                  {"Avaliação para manchas"}
+                </AppointmentButton>
               </div>
             </div>
           </details>
@@ -480,17 +364,9 @@ export default function ClinicHome({
               </div>
               <div className="treatment-action">
                 <span>{"A indicação depende de avaliação."}</span>
-                <a
-                  className="button "
-                  href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{"Cuidar da qualidade da pele"}</span>
-                  <span className="button-icon" aria-hidden="true">
-                    <img src="/assets/whatsapp.svg" alt="" />
-                  </span>
-                </a>
+                <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
+                  {"Cuidar da qualidade da pele"}
+                </AppointmentButton>
               </div>
             </div>
           </details>
@@ -533,17 +409,9 @@ export default function ClinicHome({
               </div>
               <div className="treatment-action">
                 <span>{"A indicação depende de avaliação."}</span>
-                <a
-                  className="button "
-                  href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{"Valorizar meus traços"}</span>
-                  <span className="button-icon" aria-hidden="true">
-                    <img src="/assets/whatsapp.svg" alt="" />
-                  </span>
-                </a>
+                <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
+                  {"Valorizar meus traços"}
+                </AppointmentButton>
               </div>
             </div>
           </details>
@@ -582,17 +450,9 @@ export default function ClinicHome({
               </div>
               <div className="treatment-action">
                 <span>{"A indicação depende de avaliação."}</span>
-                <a
-                  className="button "
-                  href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{"Conhecer serviços complementares"}</span>
-                  <span className="button-icon" aria-hidden="true">
-                    <img src="/assets/whatsapp.svg" alt="" />
-                  </span>
-                </a>
+                <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
+                  {"Conhecer serviços complementares"}
+                </AppointmentButton>
               </div>
             </div>
           </details>
@@ -703,17 +563,9 @@ export default function ClinicHome({
                 </div>
               </div>
               <div className="course-actions">
-                <a
-                  className="button "
-                  href="https://wa.me/5551995599459?text=Ol%C3%A1!%20Gostaria%20de%20saber%20a%20data%20da%20pr%C3%B3xima%20turma%20e%20a%20disponibilidade%20de%20vagas%20para%20o%20Curso%20de%20Design%20de%20Sobrancelhas%20da%20Cl%C3%ADnica%20Rita%20Sudbrack.%20Tamb%C3%A9m%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20op%C3%A7%C3%B5es%20Normal%20e%20VIP%20e%20o%20parcelamento%20em%20at%C3%A9%2020x%20no%20cart%C3%A3o."
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{"Quero informações sobre a próxima turma"}</span>
-                  <span className="button-icon" aria-hidden="true">
-                    <img src="/assets/whatsapp.svg" alt="" />
-                  </span>
-                </a>
+                <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1!%20Gostaria%20de%20saber%20a%20data%20da%20pr%C3%B3xima%20turma%20e%20a%20disponibilidade%20de%20vagas%20para%20o%20Curso%20de%20Design%20de%20Sobrancelhas%20da%20Cl%C3%ADnica%20Rita%20Sudbrack.%20Tamb%C3%A9m%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20op%C3%A7%C3%B5es%20Normal%20e%20VIP%20e%20o%20parcelamento%20em%20at%C3%A9%2020x%20no%20cart%C3%A3o.">
+                  {"Quero informações sobre a próxima turma"}
+                </AppointmentButton>
                 <a
                   className="button button--outline"
                   href="/cursos/design-de-sobrancelhas"
@@ -867,19 +719,9 @@ export default function ClinicHome({
             <span>{"Santa Cruz do Sul — RS"}</span>
             <span>{"Atendimento com hora marcada"}</span>
           </address>
-          <a
-            className="button button--light"
-            href="https://www.google.com/maps/search/?api=1&query=Rua%20Jo%C3%A3o%20Pessoa%2C%20603%2C%20Santa%20Cruz%20do%20Sul%2C%20RS"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>{"Ver no mapa"}</span>
-            <span className="button-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="presentation">
-                <path d="M7 17 17 7M9 7h8v8" />
-              </svg>
-            </span>
-          </a>
+          <AppointmentButton tone="light" href="https://www.google.com/maps/search/?api=1&query=Rua%20Jo%C3%A3o%20Pessoa%2C%20603%2C%20Santa%20Cruz%20do%20Sul%2C%20RS">
+            {"Ver no mapa"}
+          </AppointmentButton>
         </div>
       </section>
       <section className="faq" id="duvidas">
@@ -895,17 +737,9 @@ export default function ClinicHome({
                 "Reunimos respostas para as perguntas mais comuns antes da avaliação."
               }
             </p>
-            <a
-              className="button "
-              href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>{"Falar com a clínica"}</span>
-              <span className="button-icon" aria-hidden="true">
-                <img src="/assets/whatsapp.svg" alt="" />
-              </span>
-            </a>
+            <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
+              {"Falar com a clínica"}
+            </AppointmentButton>
           </div>
           <div className="faq-list">
             <details open>
@@ -1064,17 +898,9 @@ export default function ClinicHome({
               "Conheça suas possibilidades, esclareça dúvidas e construa um plano de cuidado mais seguro e coerente com você. Sem pressão. Sem indicações automáticas. Com conhecimento, individualidade e naturalidade."
             }
           </p>
-          <a
-            className="button button--light"
-            href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>{"Agendar avaliação pelo WhatsApp"}</span>
-            <span className="button-icon" aria-hidden="true">
-              <img src="/assets/whatsapp.svg" alt="" />
-            </span>
-          </a>
+          <AppointmentButton tone="light" href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
+            {"Agendar avaliação pelo WhatsApp"}
+          </AppointmentButton>
           <span className="cta-support">
             {
               "Converse com a equipe e encontre o melhor horário para sua avaliação."

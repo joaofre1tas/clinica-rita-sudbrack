@@ -151,11 +151,6 @@ export default function ResultsCarousel() {
           <Arrow direction="right" />
         </button>
       </div>
-      <p className="legal-note">
-        Os resultados variam conforme as características da pele, o tratamento
-        realizado, os cuidados adotados e a resposta individual de cada
-        paciente.
-      </p>
     </div>
   );
 }

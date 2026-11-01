@@ -1,0 +1,256 @@
+.cd-page {
+  background: var(--off-white);
+}
+
+.cd-header {
+  border-bottom: 0;
+}
+
+/* Hero: painel com a foto, como o palco da seção do método. */
+.cd-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: min(calc(100svh - 112px), 720px);
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--brown);
+  isolation: isolate;
+}
+
+.cd-hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cd-hero-placeholder {
+  display: grid;
+  padding: 28px;
+  background:
+    repeating-linear-gradient(135deg, #eeeadf26 0 10px, transparent 10px 20px),
+    var(--sage);
+  color: #261d16b3;
+  font-size: 0.85rem;
+  text-align: right;
+  place-items: start end;
+}
+
+.cd-hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(10deg, #261d16f0 8%, #261d1680 42%, transparent 72%);
+  content: "";
+}
+
+.cd-hero-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  padding: clamp(24px, 4vw, 48px);
+}
+
+.cd-hero-copy {
+  max-width: 620px;
+}
+
+.cd-hero-copy .eyebrow {
+  color: #eeeadfcc;
+}
+
+.cd-page .cd-hero-copy h1 {
+  color: var(--off-white);
+}
+
+.cd-hero-lead {
+  max-width: 540px;
+  margin-top: 18px;
+  color: #eeeadfe0;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.cd-hero-card {
+  flex: 0 0 min(100%, 340px);
+  padding: 22px;
+  border: 1px solid #eeeadf29;
+  border-radius: 16px;
+  background: #261d168c;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+
+.cd-hero-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 20px;
+  padding: 0;
+  color: var(--off-white);
+  font-size: 0.95rem;
+  list-style: none;
+}
+
+.cd-hero-card li + li {
+  padding-top: 10px;
+  border-top: 1px solid #eeeadf26;
+}
+
+/* Informações em bento, na mesma linguagem do "Por que escolher a clínica". */
+.cd-info {
+  padding-block: 120px;
+}
+
+.cd-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 56px;
+}
+
+.cd-info-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  min-height: 190px;
+  padding: 22px;
+  border-radius: 24px;
+  background: color-mix(in srgb, #999a83 16%, #eeeadf);
+}
+
+.cd-info-tile > p {
+  color: #261d1699;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cd-page .cd-info-tile h3 {
+  font-size: 1.3rem !important;
+  line-height: 1.2 !important;
+}
+
+.cd-info-tile small {
+  display: block;
+  margin-top: 8px;
+  color: #261d16a6;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.cd-info-tile--featured {
+  background: var(--brown);
+}
+
+.cd-info-tile--featured > p,
+.cd-info-tile--featured small {
+  color: #eeeadfb8;
+}
+
+.cd-page .cd-info-tile--featured h3 {
+  color: var(--off-white);
+}
+
+/* Conteúdo em fundo Preto, como a seção do método. */
+.cd-program {
+  padding-block: 120px;
+  background: var(--soft-black);
+  color: var(--off-white);
+}
+
+.cd-program .eyebrow {
+  color: var(--sage);
+}
+
+.cd-page .cd-program h2 {
+  color: var(--off-white);
+}
+
+.cd-program .section-heading--split > p {
+  color: #eeeadfb8;
+}
+
+.cd-program .course-modules {
+  margin-top: 56px;
+}
+
+.cd-program .course-module {
+  border-color: #eeeadf29;
+  background: transparent;
+}
+
+.cd-program .course-module::before {
+  display: none;
+}
+
+.cd-program .course-module > button {
+  color: var(--off-white);
+}
+
+.cd-program .course-module-intro strong {
+  color: var(--off-white);
+}
+
+.cd-program .course-module-intro small,
+.cd-program .course-module-content li {
+  color: #eeeadfb8;
+}
+
+.cd-program .course-module > button {
+  padding-inline: 0;
+}
+
+/* Fica sempre na última coluna, com ou sem o rótulo "Diferencial prático". */
+.cd-program .course-module-toggle {
+  grid-column: -2 / -1;
+  justify-self: end;
+  border-color: #eeeadf33;
+  color: var(--off-white);
+}
+
+@media (width<=1180px) {
+  .cd-info-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width<=920px) {
+  .cd-hero {
+    min-height: min(calc(100svh - 96px), 640px);
+  }
+
+  .cd-hero-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .cd-hero-card {
+    flex: none;
+  }
+
+  .cd-info,
+  .cd-program {
+    padding-block: 72px;
+  }
+
+  .cd-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 36px;
+  }
+
+  .cd-info-tile {
+    min-height: 160px;
+    padding: 18px;
+    gap: 24px;
+  }
+}

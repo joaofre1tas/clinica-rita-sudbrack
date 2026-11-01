@@ -1,0 +1,138 @@
+.courses-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 64px;
+}
+
+.course-tile {
+  position: relative;
+  display: block;
+  min-height: 560px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--sage);
+}
+
+.course-tile-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.course-tile-placeholder {
+  display: grid;
+  padding: 28px;
+  background:
+    repeating-linear-gradient(135deg, #eeeadf26 0 10px, transparent 10px 20px),
+    var(--sage);
+  color: #261d16b3;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  text-align: center;
+  place-items: start center;
+}
+
+.course-tile-info {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  padding: 22px;
+  border: 1px solid #eeeadf29;
+  border-radius: 16px;
+  background: #261d168c;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  color: var(--off-white);
+}
+
+.courses .course-tile-info h3 {
+  color: var(--off-white);
+  font-size: 1.5rem !important;
+  line-height: 1.15 !important;
+}
+
+.course-tile-info p {
+  margin-top: 8px;
+  color: #eeeadfd9;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.course-tile-info .course-tile-facts {
+  color: #eeeadfb8;
+  font-size: 0.82rem;
+}
+
+.course-tile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.course-tile-link svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+  transition: transform 0.25s ease;
+}
+
+.course-tile:focus-visible {
+  outline: 2px solid var(--taupe);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .course-tile:hover .course-tile-photo {
+    transform: scale(1.04);
+  }
+
+  .course-tile:hover .course-tile-link svg {
+    transform: translate(2px, -2px);
+  }
+}
+
+/* No celular os cards deslizam na horizontal, como no bento. */
+@media (width<=920px) {
+  .courses-showcase {
+    display: flex;
+    margin-top: 36px;
+    margin-inline: calc((100% - 100vw) / 2);
+    padding-inline: calc((100vw - 100%) / 2);
+    overflow-x: auto;
+    scroll-padding-inline: 15px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .courses-showcase::-webkit-scrollbar {
+    display: none;
+  }
+
+  .course-tile {
+    flex: 0 0 min(78vw, 340px);
+    min-height: 0;
+    scroll-snap-align: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-tile-photo,
+  .course-tile-link svg {
+    transition: none;
+  }
+}

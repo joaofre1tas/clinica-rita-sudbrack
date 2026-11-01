@@ -93,3 +93,20 @@ test("o catálogo lista os 64 perfumes com foto e botão de WhatsApp", async () 
   assert.equal(buttons.length, 64);
   assert.match(html, /wa\.me\/5551995599459\?text=[^"]*Yara/);
 });
+
+test("as páginas de Limpeza de Pele e Melasma Control existem sem valores", async () => {
+  for (const [slug, name] of [
+    ["limpeza-de-pele", "Limpeza de Pele"],
+    ["melasma-control", "Melasma Control"],
+  ]) {
+    const html = await readFile(
+      new URL(`.next/server/app/cursos/${slug}.html`, root),
+      "utf8",
+    );
+    assert.match(html, new RegExp(name));
+    assert.match(html, /Máximo de 2 alunos/);
+    assert.match(html, /Mais informações/);
+    assert.doesNotMatch(html, /folder/i);
+    assert.doesNotMatch(html, /R\$ ?\d/);
+  }
+});

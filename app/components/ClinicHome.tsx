@@ -3,8 +3,10 @@ import SymeSignature from "./SymeSignature";
 import EditorialHero from "./EditorialHero";
 import EditorialAbout from "./EditorialAbout";
 import AppointmentButton from "./AppointmentButton";
+import SiteHeader from "./SiteHeader";
 import MethodStage from "./MethodStage";
 import WhyBento from "./WhyBento";
+import CoursesShowcase from "./CoursesShowcase";
 import "../hero.css";
 
 export default function ClinicHome({
@@ -23,47 +25,7 @@ export default function ClinicHome({
             : "hero-masthead"
         }
       >
-        <header className="site-header site-header--editorial">
-          <a className="brand" href="#inicio" aria-label="Clínica Rita Sudbrack">
-            <img src="/assets/logo.svg" alt="Clínica Rita Sudbrack" />
-          </a>
-          <nav className="desktop-nav" aria-label="Navegação principal">
-            <a href="#sobre">{"Sobre"}</a>
-            <a href="#diferenciais">{"Diferenciais"}</a>
-            <a href="#tratamentos">{"Tratamentos"}</a>
-            <a href="#cursos">{"Cursos"}</a>
-            <a href="#resultados">{"Resultados"}</a>
-            <a href="#clinica">{"A Clínica"}</a>
-            <a href="#duvidas">{"Dúvidas"}</a>
-          </nav>
-          <AppointmentButton
-            tone="outline"
-            size="sm"
-            className="appointment-cta--header"
-            href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-          >
-            {"Agendar avaliação"}
-          </AppointmentButton>
-          <details className="mobile-menu">
-            <summary aria-label="Abrir menu">{"Menu"}</summary>
-            <nav aria-label="Navegação para celular">
-              <a href="#sobre">{"Sobre"}</a>
-              <a href="#diferenciais">{"Diferenciais"}</a>
-              <a href="#tratamentos">{"Tratamentos"}</a>
-              <a href="#cursos">{"Cursos"}</a>
-              <a href="#resultados">{"Resultados"}</a>
-              <a href="#clinica">{"A Clínica"}</a>
-              <a href="#duvidas">{"Dúvidas"}</a>
-              <a
-                href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada."
-                target="_blank"
-                rel="noreferrer"
-              >
-                {"Agendar avaliação"}
-              </a>
-            </nav>
-          </details>
-        </header>
+        <SiteHeader />
         <EditorialHero variant={heroVariant} />
       </div>
       {heroVariant === "green" && (
@@ -278,7 +240,6 @@ export default function ClinicHome({
         <div className="treatment-list">
           <details className="treatment-card" open>
             <summary>
-              <span className="treatment-number">{"01"}</span>
               <span>
                 <strong>{"Manchas e melasma"}</strong>
                 <small>
@@ -315,17 +276,10 @@ export default function ClinicHome({
                   <li>{"Recorrência após tentativas anteriores"}</li>
                 </ul>
               </div>
-              <div className="treatment-action">
-                <span>{"A indicação depende de avaliação."}</span>
-                <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
-                  {"Avaliação para manchas"}
-                </AppointmentButton>
-              </div>
             </div>
           </details>
           <details className="treatment-card">
             <summary>
-              <span className="treatment-number">{"02"}</span>
               <span>
                 <strong>{"Rejuvenescimento e qualidade da pele"}</strong>
                 <small>
@@ -362,17 +316,10 @@ export default function ClinicHome({
                   <li>{"Recuperar uma aparência mais descansada"}</li>
                 </ul>
               </div>
-              <div className="treatment-action">
-                <span>{"A indicação depende de avaliação."}</span>
-                <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
-                  {"Cuidar da qualidade da pele"}
-                </AppointmentButton>
-              </div>
             </div>
           </details>
           <details className="treatment-card">
             <summary>
-              <span className="treatment-number">{"03"}</span>
               <span>
                 <strong>{"Valorização do olhar e dos traços"}</strong>
                 <small>
@@ -407,17 +354,10 @@ export default function ClinicHome({
                   <li>{"Realçar sobrancelhas e cílios"}</li>
                 </ul>
               </div>
-              <div className="treatment-action">
-                <span>{"A indicação depende de avaliação."}</span>
-                <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
-                  {"Valorizar meus traços"}
-                </AppointmentButton>
-              </div>
             </div>
           </details>
           <details className="treatment-card">
             <summary>
-              <span className="treatment-number">{"04"}</span>
               <span>
                 <strong>{"Beleza e autocuidado"}</strong>
                 <small>
@@ -448,14 +388,17 @@ export default function ClinicHome({
                   <li>{"Atendimento acolhedor"}</li>
                 </ul>
               </div>
-              <div className="treatment-action">
-                <span>{"A indicação depende de avaliação."}</span>
-                <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
-                  {"Conhecer serviços complementares"}
-                </AppointmentButton>
-              </div>
             </div>
           </details>
+        </div>
+        <div className="treatments-cta">
+          <div>
+            <h3>{"Não sabe qual tratamento faz sentido para você?"}</h3>
+            <p>{"A indicação depende de avaliação."}</p>
+          </div>
+          <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1%21%20Conheci%20a%20Cl%C3%ADnica%20Rita%20Sudbrack%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20personalizada.">
+            {"Agendar minha avaliação"}
+          </AppointmentButton>
         </div>
       </section>
       <section className="courses" id="cursos">
@@ -471,113 +414,7 @@ export default function ClinicHome({
               }
             </p>
           </div>
-          <article className="course-card">
-            <div className="course-visual">
-              <img
-                src="/assets/images/curso-design-sobrancelhas.png"
-                alt="Treinamento profissional de design de sobrancelhas em ambiente clínico"
-              />
-              <div
-                className="course-badges"
-                aria-label="Características do curso"
-              >
-                <span>{"Curso presencial"}</span>
-                <span>{"Teoria e prática"}</span>
-                <span>{"Modelos reais"}</span>
-                <span>{"Até 20x no cartão"}</span>
-              </div>
-            </div>
-            <div className="course-copy">
-              <p className="course-category">{"Formação profissional"}</p>
-              <h3>{"Curso de Design de Sobrancelhas"}</h3>
-              <p className="course-description">
-                {
-                  "Uma formação completa que percorre os fundamentos de biossegurança e anatomia até as técnicas de visagismo, mapeamento, epilação, henna, tintura, acabamento e prática supervisionada."
-                }
-              </p>
-              <div className="course-benefits">
-                <div className="course-benefit">
-                  <span className="benefit-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="presentation">
-                      <path d="M12 3 5.5 5.8v5.4c0 4.2 2.6 7.5 6.5 9.8 3.9-2.3 6.5-5.6 6.5-9.8V5.8L12 3Z" />
-                      <path d="m9.2 12 1.8 1.8 3.9-4.1" />
-                    </svg>
-                  </span>
-                  <div>
-                    <strong>{"Fundamentos técnicos"}</strong>
-                    <span>
-                      {"Biossegurança e responsabilidade profissional."}
-                    </span>
-                  </div>
-                </div>
-                <div className="course-benefit">
-                  <span className="benefit-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="presentation">
-                      <path d="M6.2 13.5c.4 4.1 2.4 6.5 5.8 7.5 3.4-1 5.4-3.4 5.8-7.5" />
-                      <path d="M5 10.5C5 6.4 8.1 3 12 3s7 3.4 7 7.5" />
-                      <path d="M8.3 10.2c1.1-.9 2.2-.9 3.3 0M12.4 10.2c1.1-.9 2.2-.9 3.3 0M12 11.5v3" />
-                    </svg>
-                  </span>
-                  <div>
-                    <strong>{"Visagismo personalizado"}</strong>
-                    <span>{"Leitura facial e desenho para cada cliente."}</span>
-                  </div>
-                </div>
-                <div className="course-benefit">
-                  <span className="benefit-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="presentation">
-                      <path d="m4 19 5.2-5.2M7 17l-2-2M10 13l8-8a1.4 1.4 0 0 1 2 2l-8 8" />
-                      <path d="M14.5 5.5 18.5 9.5" />
-                    </svg>
-                  </span>
-                  <div>
-                    <strong>{"Técnicas completas"}</strong>
-                    <span>{"Epilação, acabamento, henna e tintura."}</span>
-                  </div>
-                </div>
-                <div className="course-benefit">
-                  <span className="benefit-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="presentation">
-                      <path d="M4 18.5V7.2A2.2 2.2 0 0 1 6.2 5H10l2 2h5.8A2.2 2.2 0 0 1 20 9.2v9.3" />
-                      <path d="M8 13h8M12 9v8" />
-                    </svg>
-                  </span>
-                  <div>
-                    <strong>{"Prática orientada"}</strong>
-                    <span>{"Treino em moldes e modelos reais."}</span>
-                  </div>
-                </div>
-              </div>
-              <div className="course-summary">
-                <div>
-                  <span>{"Modalidade"}</span>
-                  <strong>{"Presencial"}</strong>
-                </div>
-                <div>
-                  <span>{"Duração"}</span>
-                  <strong>{"2 dias de curso"}</strong>
-                </div>
-                <div>
-                  <span>{"Turma"}</span>
-                  <strong>{"Máximo de 3 alunas"}</strong>
-                </div>
-              </div>
-              <div className="course-actions">
-                <AppointmentButton href="https://wa.me/5551995599459?text=Ol%C3%A1!%20Gostaria%20de%20saber%20a%20data%20da%20pr%C3%B3xima%20turma%20e%20a%20disponibilidade%20de%20vagas%20para%20o%20Curso%20de%20Design%20de%20Sobrancelhas%20da%20Cl%C3%ADnica%20Rita%20Sudbrack.%20Tamb%C3%A9m%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20op%C3%A7%C3%B5es%20Normal%20e%20VIP%20e%20o%20parcelamento%20em%20at%C3%A9%2020x%20no%20cart%C3%A3o.">
-                  {"Quero informações sobre a próxima turma"}
-                </AppointmentButton>
-                <a
-                  className="button button--outline"
-                  href="/cursos/design-de-sobrancelhas"
-                >
-                  <span>{"Ver mais informações"}</span>
-                  <span className="outline-button-icon" aria-hidden="true">
-                    {"→"}
-                  </span>
-                </a>
-              </div>
-            </div>
-          </article>
+          <CoursesShowcase />
         </div>
       </section>
       <section className="results" id="resultados">

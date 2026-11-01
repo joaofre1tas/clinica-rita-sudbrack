@@ -21,7 +21,6 @@ export default function CourseModules() {
               aria-controls={`course-module-${index}`}
               onClick={() => setOpen(expanded ? null : index)}
             >
-              <span className="course-module-number">{module.number}</span>
               <span className="course-module-intro">
                 <strong>{module.title}</strong>
                 <small>{module.description}</small>

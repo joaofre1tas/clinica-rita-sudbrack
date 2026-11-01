@@ -2,7 +2,7 @@
 .why-bento {
   --tile: color-mix(in srgb, #999a83 16%, #eeeadf);
 
-  padding-block: 145px 0;
+  padding-block: 145px;
   background: var(--off-white);
 }
 
@@ -339,7 +339,7 @@
 /* Em telas estreitas a altura não comporta tudo empilhado: os blocos deslizam na horizontal. */
 @media (width<=920px) {
   .why-bento {
-    padding-block: 84px 0;
+    padding-block: 84px;
   }
 
   .why-bento-heading {

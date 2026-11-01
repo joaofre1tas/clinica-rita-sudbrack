@@ -41,11 +41,6 @@ export default function ResultsCarousel() {
     setStart((current) => (current + delta + results.length) % results.length);
   }
 
-  function choose(index: number) {
-    setDirection(index >= start ? "next" : "previous");
-    setStart(index);
-  }
-
   return (
     <div
       className="results-carousel"
@@ -118,38 +113,28 @@ export default function ResultsCarousel() {
         ))}
       </div>
       <div className="results-carousel-controls">
-        <button
-          className="results-carousel-arrow"
-          type="button"
-          onClick={() => move(-1)}
-          aria-label="Voltar um resultado"
-        >
-          <Arrow direction="left" />
-        </button>
-        <div className="results-carousel-dots" aria-label="Escolher resultado">
-          {results.map((_, index) => (
-            <button
-              key={index}
-              className={index === start ? "is-active" : ""}
-              type="button"
-              onClick={() => choose(index)}
-              aria-label={`Começar pelo resultado ${index + 1}`}
-              aria-current={index === start ? "true" : undefined}
-            />
-          ))}
-        </div>
         <span className="results-carousel-counter" aria-live="polite">
           {String(start + 1).padStart(2, "0")} /{" "}
           {String(results.length).padStart(2, "0")}
         </span>
-        <button
-          className="results-carousel-arrow"
-          type="button"
-          onClick={() => move(1)}
-          aria-label="Avançar um resultado"
-        >
-          <Arrow direction="right" />
-        </button>
+        <div className="results-carousel-arrows">
+          <button
+            className="results-carousel-arrow"
+            type="button"
+            onClick={() => move(-1)}
+            aria-label="Voltar um resultado"
+          >
+            <Arrow direction="left" />
+          </button>
+          <button
+            className="results-carousel-arrow"
+            type="button"
+            onClick={() => move(1)}
+            aria-label="Avançar um resultado"
+          >
+            <Arrow direction="right" />
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,163 @@
+.treatments-picker {
+  padding-block: 145px;
+  background: var(--soft-black);
+  color: var(--off-white);
+}
+
+.treatments-picker-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 64px;
+}
+
+.treatments-picker .eyebrow {
+  color: var(--sage);
+}
+
+.treatments-picker h2 {
+  color: var(--off-white);
+}
+
+.treatments-picker-intro {
+  max-width: 480px;
+  margin-top: 18px;
+  color: #eeeadfb8;
+}
+
+.treatments-picker-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.treatments-picker-chips button {
+  min-height: 46px;
+  padding: 10px 20px;
+  border: 1px solid #eeeadf40;
+  border-radius: 999px;
+  background: none;
+  color: var(--off-white);
+  font-family: inherit;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.treatments-picker-chips button.is-active {
+  border-color: var(--off-white);
+  background: var(--off-white);
+  color: var(--soft-black);
+}
+
+.treatments-picker-chips button:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
+}
+
+.treatments-picker-card {
+  position: relative;
+  height: 540px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--sage);
+  animation: treatments-picker-fade 0.35s ease;
+}
+
+.treatments-picker-photo {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  background:
+    repeating-linear-gradient(135deg, #eeeadf26 0 10px, transparent 10px 20px),
+    var(--sage);
+  color: #261d16b3;
+  font-size: 0.82rem;
+  text-align: center;
+  place-items: start center;
+}
+
+.treatments-picker-info {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  padding: 20px 22px;
+  border: 1px solid #eeeadf29;
+  border-radius: 16px;
+  background: #261d168c;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.treatments-picker .treatments-picker-info h3 {
+  color: var(--off-white);
+  font-size: 1.5rem !important;
+}
+
+.treatments-picker-info p {
+  margin-block: 6px 12px;
+  color: #eeeadfd9;
+  font-size: 0.92rem;
+}
+
+.treatments-picker-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 0 0 16px;
+  padding: 0;
+  color: var(--off-white);
+  font-size: 0.86rem;
+  list-style: none;
+}
+
+@keyframes treatments-picker-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (width<=920px) {
+  .treatments-picker {
+    padding-block: 84px;
+  }
+
+  .treatments-picker-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  /* Em uma linha, para o card continuar à vista enquanto a pessoa escolhe. */
+  .treatments-picker-chips {
+    flex-wrap: nowrap;
+    margin-top: 28px;
+    margin-inline: calc((100% - 100vw) / 2);
+    padding-inline: calc((100vw - 100%) / 2);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .treatments-picker-chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  .treatments-picker-chips button {
+    flex: none;
+  }
+
+  .treatments-picker-card {
+    height: 460px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .treatments-picker-card {
+    animation: none;
+  }
+}

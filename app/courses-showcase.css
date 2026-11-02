@@ -137,3 +137,5 @@
     transition: none;
   }
 }
+
+.course-tile-photo[src*="/editorial/"] {object-position:76% center;}

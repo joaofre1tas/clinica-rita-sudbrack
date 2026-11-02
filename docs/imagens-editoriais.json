@@ -1,0 +1,81 @@
+{
+  "tool": "image_gen",
+  "sharedDirection": "Luz de janela, paleta areia/creme/champagne, lente 85mm, textura de pele real, sem texto, logotipo ou resultados simulados.",
+  "assets": [
+    {
+      "name": "acolhimento",
+      "file": "public/assets/images/editorial/acolhimento.webp",
+      "prompt": "Mãos em gesto de acolhimento, luva marfim, luz de janela e paleta areia."
+    },
+    {
+      "name": "manchas",
+      "file": "public/assets/images/editorial/manchas.webp",
+      "prompt": "Close-up three-quarter portrait of a Brazilian woman aged 32 with natural freckles and realistic uneven skin pigmentation, calm expression, bare skin, no makeup. Face on right side, warm beige negative space left."
+    },
+    {
+      "name": "melasma",
+      "file": "public/assets/images/editorial/melasma.webp",
+      "prompt": "Close-up of a middle-aged Brazilian woman with medium olive skin and subtle natural melasma on cheeks, eyes closed while an ivory-gloved professional gently applies skincare with a small brush. Show no professional face."
+    },
+    {
+      "name": "linhas",
+      "file": "public/assets/images/editorial/linhas.webp",
+      "prompt": "Extreme close-up of the eye and temple of a smiling woman aged 50, fine natural expression lines, healthy real skin texture. Horizontal crop."
+    },
+    {
+      "name": "flacidez",
+      "file": "public/assets/images/editorial/flacidez.webp",
+      "prompt": "Editorial close-up of a mature woman's jawline and neck, age 55, realistic relaxed skin and pores, graceful profile facing window. No retouching."
+    },
+    {
+      "name": "vico",
+      "file": "public/assets/images/editorial/vico.webp",
+      "prompt": "Portrait of a Brazilian woman with deep brown skin gently applying clear serum to her cheek, eyes closed, realistic natural radiant skin, square framing."
+    },
+    {
+      "name": "poros",
+      "file": "public/assets/images/editorial/poros.webp",
+      "prompt": "Macro beauty photograph of a woman's cheek and side of nose showing authentic fine pores and skin texture, gentle grazing window light, no excessive magnification or retouching."
+    },
+    {
+      "name": "olheiras",
+      "file": "public/assets/images/editorial/olheiras.webp",
+      "prompt": "Close-up of a Brazilian woman's eyes with natural mild under-eye shadows, warm medium skin, neutral expression and realistic texture. No before-after comparison."
+    },
+    {
+      "name": "labios",
+      "file": "public/assets/images/editorial/labios.webp",
+      "prompt": "Close-up of natural feminine lips and lower face, realistic fine lip texture, nude natural color, no lipstick, no injections, soft profile."
+    },
+    {
+      "name": "sobrancelhas",
+      "file": "public/assets/images/editorial/sobrancelhas.webp",
+      "prompt": "Close-up of a woman's natural eyebrow and eyelashes, ivory-gloved hand holding professional eyebrow mapping thread above brow, realistic anatomically correct eye."
+    },
+    {
+      "name": "unhas",
+      "file": "public/assets/images/editorial/unhas.webp",
+      "prompt": "Close-up of feminine hands with short elegant nude manicure resting on cream linen, soft window shadows and natural skin texture."
+    },
+    {
+      "name": "curso-limpeza",
+      "file": "public/assets/images/editorial/curso-limpeza.webp",
+      "prompt": "Illustrative skincare training scene. Two ivory-gloved hands demonstrate gentle facial cleansing with cotton pads on an adult woman reclining with a cream headband. A second learner's gloved hands visible at edge, no teacher faces. Wide landscape photograph with scene on right and softly blurred beige negative space left for title. Not a real class or real clinic."
+    },
+    {
+      "name": "curso-melasma",
+      "file": "public/assets/images/editorial/curso-melasma.webp",
+      "prompt": "Illustrative aesthetic skincare education scene. Adult woman reclining with cream headband, subtle natural cheek pigmentation, gloved hands of instructor demonstrating applying skincare with small fan brush, learner observing only hands visible. No instructor face. Wide landscape with scene on right and softly blurred beige space left. No needles, no real clinic or team implied."
+    },
+    {
+      "name": "curso-sobrancelhas-card",
+      "file": "public/assets/images/editorial/curso-sobrancelhas-card.webp",
+      "prompt": "Demonstração de design de sobrancelhas, mãos com luvas marfim, luz natural de janela, paleta areia/creme/champagne, pele natural. Card: retrato vertical com lápis de marcação. Banner: composição horizontal com escovinha, paciente à direita e espaço livre à esquerda. Sem texto ou logotipos."
+    },
+    {
+      "name": "curso-sobrancelhas-banner",
+      "file": "public/assets/images/editorial/curso-sobrancelhas-banner.webp",
+      "prompt": "Demonstração de design de sobrancelhas, mãos com luvas marfim, luz natural de janela, paleta areia/creme/champagne, pele natural. Card: retrato vertical com lápis de marcação. Banner: composição horizontal com escovinha, paciente à direita e espaço livre à esquerda. Sem texto ou logotipos."
+    }
+  ]
+}

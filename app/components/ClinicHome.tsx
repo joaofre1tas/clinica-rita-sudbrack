@@ -183,13 +183,7 @@ export default function ClinicHome({
       <MethodStage />
       <WhyBento>
         <article className="melasma-card">
-          <div className="melasma-card-photo">
-            {/* Placeholder: trocar pela foto real quando existir. */}
-            <span>
-              Foto de fundo a incluir: pele em close ou Rita em atendimento,
-              formato horizontal, com área livre à direita
-            </span>
-          </div>
+          <div className="melasma-card-photo" aria-hidden="true" />
           <div className="melasma-index" aria-hidden="true">
             {"MC"}
           </div>

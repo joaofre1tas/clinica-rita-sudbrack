@@ -80,29 +80,23 @@ export default function WhyBento({ children }: { children?: ReactNode }) {
 
           <article className="why-tile why-tile--welcome">
             <h3>Experiência acolhedora e individualizada</h3>
-            {/* Placeholder: trocar pela foto real quando existir. */}
-            <div className="why-placeholder">
-              <span>
-                Foto a incluir: mãos da Rita avaliando a pele de uma paciente,
-                luz natural, formato horizontal
-              </span>
-            </div>
+            <img className="why-welcome-photo" src="/assets/images/editorial/acolhimento.webp" alt="Mãos em gesto de acolhimento" loading="lazy" />
           </article>
 
           <article className="why-tile why-tile--plan">
             <div className="why-faces" aria-hidden="true">
               <img
-                src="/assets/images/results/01-depois.jpg"
+                src="/assets/images/editorial/manchas.webp"
                 alt=""
                 loading="lazy"
               />
               <img
-                src="/assets/images/rita-detalhe.webp"
+                src="/assets/images/editorial/vico.webp"
                 alt=""
                 loading="lazy"
               />
               <img
-                src="/assets/images/results/02-depois.jpg"
+                src="/assets/images/editorial/flacidez.webp"
                 alt=""
                 loading="lazy"
               />

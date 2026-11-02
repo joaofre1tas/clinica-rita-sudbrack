@@ -87,6 +87,7 @@ const needs: Need[] = [
 export default function TreatmentsPicker() {
   const [active, setActive] = useState(0);
   const current = needs[active];
+  const images = ["manchas", "melasma", "linhas", "flacidez", "vico", "poros", "olheiras", "labios", "sobrancelhas", "unhas"];
 
   return (
     <section
@@ -117,10 +118,7 @@ export default function TreatmentsPicker() {
           </div>
         </div>
         <article className="treatments-picker-card" key={current.name}>
-          {/* Placeholder: trocar pela foto real quando existir. */}
-          <div className="treatments-picker-photo">
-            <span>{current.brief}</span>
-          </div>
+          <img className="treatments-picker-photo" src={`/assets/images/editorial/${images[active]}.webp`} alt={`Cuidados com ${current.name.toLowerCase()}`} loading="lazy" />
           <div className="treatments-picker-info">
             <h3>{current.name}</h3>
             <p>{current.line}</p>

@@ -52,9 +52,9 @@ export const courses = {
       "Conheça o conteúdo, os benefícios e as informações do Curso de Design de Sobrancelhas da Clínica Rita Sudbrack.",
     lead: "Uma formação para aprender técnicas profissionais com segurança, atenção aos detalhes e prática orientada.",
     facts: ["Presencial", "2 dias de curso", "Máximo de 3 alunas"],
-    image: "/assets/images/curso-design-sobrancelhas.png",
+    image: "/assets/images/editorial/curso-sobrancelhas-banner.webp",
     imageAlt:
-      "Rita Sudbrack aplicando técnica de design de sobrancelhas em uma modelo",
+      "Demonstração de técnica de design de sobrancelhas",
     ctaLabel: "Mais informações",
     whatsappMessage:
       "Olá! Gostaria de saber a data da próxima turma e a disponibilidade de vagas para o Curso de Design de Sobrancelhas da Clínica Rita Sudbrack. Também gostaria de informações sobre as opções Normal e VIP e o parcelamento em até 20x no cartão.",
@@ -131,8 +131,8 @@ export const courses = {
       "Curso presencial de Limpeza de Pele na Clínica Rita Sudbrack, em 2 dias, com apostila, certificado e materiais para iniciar seus atendimentos.",
     lead: "Uma formação presencial de 2 dias, com apostila, certificado e materiais para iniciar seus atendimentos.",
     facts: ["Presencial", "2 dias", "Máximo de 2 alunos"],
-    photoBrief:
-      "Foto a incluir: aula prática de limpeza de pele, formato horizontal, área livre à esquerda",
+    image: "/assets/images/editorial/curso-limpeza.webp",
+    imageAlt: "Prática de limpeza de pele",
     ctaLabel: "Mais informações",
     whatsappMessage:
       "Olá! Gostaria de mais informações sobre o Curso de Limpeza de Pele da Clínica Rita Sudbrack.",
@@ -151,8 +151,8 @@ export const courses = {
       "Curso de protocolo de melasma para profissionais da área da beleza, presencial, em 2 dias, na Clínica Rita Sudbrack.",
     lead: "Curso de protocolo de melasma para profissionais da área da beleza.",
     facts: ["Presencial", "2 dias", "Máximo de 2 alunos"],
-    photoBrief:
-      "Foto a incluir: Rita ensinando o protocolo de melasma, formato horizontal, área livre à esquerda",
+    image: "/assets/images/editorial/curso-melasma.webp",
+    imageAlt: "Prática de cuidados com melasma",
     ctaLabel: "Mais informações",
     whatsappMessage:
       "Olá! Gostaria de mais informações sobre o Curso Melasma Control da Clínica Rita Sudbrack.",

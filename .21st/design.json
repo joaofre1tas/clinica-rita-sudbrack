@@ -70,7 +70,8 @@
       "Preservar a identidade da clínica: Andine, Urbanist, creme, sálvia e marrom.",
       "Usar as fotografias reais da Rita e preservar os links de agendamento existentes.",
       "Refazer uma seção por vez para revisão, preservando o hero bege aprovado e o site principal.",
-      "Manter fundo claro nas seções abaixo do hero, sem degradês de transição entre seções."
+      "Manter fundo claro nas seções abaixo do hero, sem degradês de transição entre seções.",
+      "Nunca adicionar avisos editoriais sobre imagens ilustrativas, geradas por IA ou comparações na interface pública. Registrar a origem dos assets apenas na documentação interna."
     ],
     "avoid": []
   },

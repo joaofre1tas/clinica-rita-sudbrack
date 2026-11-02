@@ -19,9 +19,9 @@ const courses: Course[] = [
     facts: ["Presencial", "2 dias", "Máximo de 3 alunas"],
     href: "/cursos/design-de-sobrancelhas",
     linkLabel: "Conhecer o curso",
-    image: "/assets/images/curso-design-sobrancelhas.png",
+    image: "/assets/images/editorial/curso-sobrancelhas-card.webp",
     imageAlt:
-      "Rita Sudbrack aplicando técnica de design de sobrancelhas em uma modelo",
+      "Demonstração de técnica de design de sobrancelhas",
   },
   {
     name: "Limpeza de Pele",
@@ -30,8 +30,8 @@ const courses: Course[] = [
     facts: ["Presencial", "2 dias", "Máximo de 2 alunos"],
     href: "/cursos/limpeza-de-pele",
     linkLabel: "Conhecer o curso",
-    photoBrief:
-      "Foto a incluir: aula prática de limpeza de pele, formato vertical",
+    image: "/assets/images/editorial/curso-limpeza.webp",
+    imageAlt: "Prática de limpeza de pele",
   },
   {
     name: "Melasma Control",
@@ -39,8 +39,8 @@ const courses: Course[] = [
     facts: ["Presencial", "2 dias", "Máximo de 2 alunos"],
     href: "/cursos/melasma-control",
     linkLabel: "Conhecer o curso",
-    photoBrief:
-      "Foto a incluir: Rita ensinando o protocolo de melasma, formato vertical",
+    image: "/assets/images/editorial/curso-melasma.webp",
+    imageAlt: "Prática de cuidados com melasma",
   },
 ];
 

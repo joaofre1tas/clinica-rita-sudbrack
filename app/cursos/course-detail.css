@@ -254,3 +254,8 @@
     gap: 24px;
   }
 }
+
+@media(width<=640px) {
+ .cd-hero-photo[src*="/editorial/"] {object-position:78% center;}
+ .cd-hero:has(.cd-hero-photo[src*="/editorial/"])::after {background:linear-gradient(0deg,#261d16eb 0%,#261d1699 60%,#261d1640 100%);}
+}

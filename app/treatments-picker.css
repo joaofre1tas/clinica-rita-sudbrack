@@ -161,3 +161,6 @@
     animation: none;
   }
 }
+
+/* Fotografia editorial ilustrativa para cada objetivo. */
+img.treatments-picker-photo { display:block; object-fit:cover; object-position:60% center; padding:0; background:none; }

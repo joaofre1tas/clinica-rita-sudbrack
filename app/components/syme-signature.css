@@ -29,6 +29,7 @@
   transition: width 0.28s ease;
   display: block;
   position: relative;
+  overflow: hidden;
 }
 
 .syme-by__mark img {

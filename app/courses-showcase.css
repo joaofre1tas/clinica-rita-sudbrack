@@ -8,6 +8,7 @@
 .course-tile {
   position: relative;
   display: block;
+  width: 100%;
   min-height: 560px;
   aspect-ratio: 3 / 4;
   overflow: hidden;

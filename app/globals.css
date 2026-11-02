@@ -367,12 +367,10 @@ button:focus-visible {
 }
 h1,
 h2,
-.journey-heading h3,
 .course-copy h3,
 .course-subheading h3,
 .course-conversion h3,
-.melasma-card h3,
-.location-card h3 {
+.melasma-card h3 {
   letter-spacing: -0.035em;
   font-family: Andine, Georgia, serif;
   font-weight: 400;
@@ -1880,58 +1878,6 @@ h2 {
   letter-spacing: 0.12em;
   font-size: 0.68rem;
 }
-.clinic {
-  padding-block: 145px;
-}
-.clinic-layout {
-  grid-template-columns: minmax(0, 1.1fr) minmax(390px, 0.8fr);
-  align-items: center;
-  gap: clamp(55px, 7vw, 110px);
-  display: grid;
-}
-.clinic-image-wrap {
-  border-radius: 4px 190px 4px 4px;
-  min-height: 650px;
-  position: relative;
-  overflow: hidden;
-}
-.clinic-image-wrap:after {
-  content: "";
-  background: linear-gradient(#0000 70%, #261d1673);
-  position: absolute;
-  inset: 0;
-}
-.clinic-image-wrap img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.clinic-image-wrap span {
-  z-index: 1;
-  color: #eeeadfc7;
-  font-size: 0.62rem;
-  font-style: italic;
-  position: absolute;
-  bottom: 20px;
-  left: 24px;
-  right: 24px;
-}
-.clinic-copy h2 {
-  font-size: clamp(3.3rem, 5vw, 5.8rem);
-}
-.clinic-copy {
-  flex-direction: column;
-  justify-content: center;
-  min-height: 650px;
-  display: flex;
-}
-.clinic-copy > p:not(.eyebrow) {
-  margin-top: 26px;
-}
-.clinic-copy > p:not(.eyebrow, .lead) {
-  color: #261d16ad;
-}
 .clinic-features {
   border-top: 1px solid var(--line);
   grid-template-columns: 1fr 1fr;
@@ -1965,103 +1911,6 @@ h2 {
   stroke-width: 1.7px;
   width: 13px;
   height: 13px;
-}
-.journey {
-  grid-template-columns: minmax(0, 0.68fr) minmax(0, 1.32fr);
-  gap: clamp(70px, 8vw, 120px);
-  margin-top: 150px;
-  display: grid;
-}
-.journey-heading {
-  align-self: start;
-  min-width: 0;
-  padding-right: 12px;
-  position: sticky;
-  top: 130px;
-}
-.journey-heading h3 {
-  letter-spacing: -0.045em;
-  overflow-wrap: normal;
-  word-break: normal;
-  max-width: 440px;
-  font-size: clamp(2.6rem, 3.1vw, 3.55rem);
-  line-height: 0.98;
-}
-.journey-title-word {
-  white-space: nowrap;
-  display: inline-block;
-}
-.journey-heading > p:last-child {
-  color: #261d16a3;
-  max-width: 410px;
-  margin-top: 28px;
-  font-size: 0.9rem;
-  line-height: 1.65;
-}
-.journey ol {
-  border-top: 1px solid var(--line);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.journey li {
-  border-bottom: 1px solid var(--line);
-  grid-template-columns: 60px 1fr;
-  align-items: start;
-  gap: 34px;
-  min-height: 170px;
-  padding: 34px 10px;
-  display: grid;
-}
-.journey li > span {
-  color: var(--taupe);
-  font-family: var(--font-urbanist), Arial, sans-serif;
-  font-size: 1.4rem;
-}
-.journey h4 {
-  color: var(--soft-black);
-  letter-spacing: -0.025em;
-  margin: 0;
-  font-family: var(--font-urbanist), Arial, sans-serif;
-  font-size: 2.2rem;
-  font-weight: 500;
-  line-height: 1;
-}
-.journey li p {
-  color: #261d169e;
-  max-width: 570px;
-  margin-top: 15px;
-  font-size: 0.88rem;
-}
-.location-card {
-  background: var(--sage);
-  color: var(--off-white);
-  grid-template-columns: 1fr 0.9fr auto;
-  align-items: center;
-  gap: 45px;
-  margin-top: 130px;
-  padding: 55px 60px;
-  display: grid;
-}
-.location-card .eyebrow {
-  color: #eeeadfab;
-}
-.location-card h3 {
-  color: var(--off-white);
-  font-size: clamp(2.5rem, 3.5vw, 4rem);
-}
-.location-card address {
-  gap: 3px;
-  font-size: 0.83rem;
-  font-style: normal;
-  display: grid;
-}
-.location-card address strong {
-  font-size: 1rem;
-  font-weight: 500;
-}
-.location-card address span {
-  color: #eeeadfad;
 }
 .faq {
   background: var(--cream);
@@ -2382,8 +2231,6 @@ h2 {
   .purpose-grid,
   .section-heading--split,
   .differentials-layout,
-  .clinic-layout,
-  .journey,
   .faq-layout {
     grid-template-columns: 1fr;
   }
@@ -2513,31 +2360,8 @@ h2 {
   .course-detail-summary > div:nth-child(n + 3) {
     border-top: 1px solid var(--line);
   }
-  .clinic-copy {
-    max-width: 750px;
-    min-height: 0;
-  }
-  .journey {
-    gap: 50px;
-    margin-top: 110px;
-  }
-  .journey-heading h3 {
-    max-width: 680px;
-    font-size: clamp(2.55rem, 6.2vw, 3.8rem);
-  }
-  .journey-heading,
   .faq-heading {
     position: static;
-  }
-  .journey-heading > p:last-child {
-    max-width: 650px;
-  }
-  .location-card {
-    grid-template-columns: 1fr 1fr;
-  }
-  .location-card .button {
-    grid-column: 1/-1;
-    width: fit-content;
   }
   .faq-layout {
     gap: 70px;
@@ -2865,37 +2689,6 @@ h2 {
   .results-carousel-arrow {
     width: 42px;
     height: 42px;
-  }
-  .clinic-image-wrap {
-    border-radius: 4px 110px 4px 4px;
-    min-height: 440px;
-  }
-  .clinic-copy h2 {
-    font-size: clamp(3rem, 14vw, 4.5rem);
-  }
-  .journey {
-    margin-top: 90px;
-  }
-  .journey-heading h3 {
-    font-size: clamp(2rem, 8.6vw, 2.65rem);
-    line-height: 1.02;
-  }
-  .journey li {
-    grid-template-columns: 42px 1fr;
-    gap: 18px;
-    min-height: 150px;
-  }
-  .journey h4 {
-    font-size: 1.8rem;
-  }
-  .location-card {
-    grid-template-columns: 1fr;
-    margin-top: 90px;
-    padding: 40px 25px;
-  }
-  .location-card .button {
-    grid-column: auto;
-    width: 100%;
   }
   .faq-heading h2 {
     font-size: clamp(3rem, 14vw, 4.5rem);

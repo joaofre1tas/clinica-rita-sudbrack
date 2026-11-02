@@ -8,6 +8,7 @@ import MethodStage from "./MethodStage";
 import WhyBento from "./WhyBento";
 import TreatmentsPicker from "./TreatmentsPicker";
 import CoursesShowcase from "./CoursesShowcase";
+import ClinicVisit from "./ClinicVisit";
 import "../hero.css";
 
 export default function ClinicHome({
@@ -254,131 +255,7 @@ export default function ClinicHome({
           <ResultsCarousel />
         </div>
       </section>
-      <section className="clinic section-shell" id="clinica">
-        <div className="clinic-layout">
-          <div className="clinic-image-wrap">
-            <img
-              src="/assets/images/foto-clinica.jpg"
-              alt="Recepção da Clínica Rita Sudbrack"
-            />
-          </div>
-          <div className="clinic-copy">
-            <p className="eyebrow">{"A experiência da clínica"}</p>
-            <h2>
-              {"Um espaço pensado para cuidar de você com"}{" "}
-              <em>{"conforto e privacidade"}</em>
-            </h2>
-            <p className="lead">
-              {
-                "A experiência da paciente não começa no procedimento. Ela começa na forma como é recebida."
-              }
-            </p>
-            <p>
-              {
-                "Um ambiente onde você pode conversar com tranquilidade, esclarecer dúvidas e compreender suas possibilidades antes de tomar qualquer decisão."
-              }
-            </p>
-          </div>
-        </div>
-        <div className="journey">
-          <div className="journey-heading">
-            <p className="eyebrow">{"Sua jornada"}</p>
-            <h3>
-              {"Do primeiro contato ao"}{" "}
-              <span className="journey-title-word">{"acompanhamento"}</span>
-            </h3>
-            <p>
-              {
-                "Você não precisa escolher um tratamento antes de entrar em contato. A avaliação existe justamente para ajudar nessa decisão."
-              }
-            </p>
-          </div>
-          <ol>
-            <li>
-              <span>
-                {"0"}
-                {"1"}
-              </span>
-              <div>
-                <h4>{"Contato pelo WhatsApp"}</h4>
-                <p>
-                  {"Você informa à equipe que deseja agendar uma avaliação."}
-                </p>
-              </div>
-            </li>
-            <li>
-              <span>
-                {"0"}
-                {"2"}
-              </span>
-              <div>
-                <h4>{"Agendamento"}</h4>
-                <p>
-                  {
-                    "A equipe apresenta os horários disponíveis e orienta sobre a visita."
-                  }
-                </p>
-              </div>
-            </li>
-            <li>
-              <span>
-                {"0"}
-                {"3"}
-              </span>
-              <div>
-                <h4>{"Avaliação personalizada"}</h4>
-                <p>
-                  {
-                    "Rita conhece suas queixas, seu histórico e seus objetivos, além de analisar sua pele."
-                  }
-                </p>
-              </div>
-            </li>
-            <li>
-              <span>
-                {"0"}
-                {"4"}
-              </span>
-              <div>
-                <h4>{"Definição do plano"}</h4>
-                <p>
-                  {
-                    "As possibilidades são explicadas com clareza e o plano é definido conforme o seu caso."
-                  }
-                </p>
-              </div>
-            </li>
-            <li>
-              <span>
-                {"0"}
-                {"5"}
-              </span>
-              <div>
-                <h4>{"Tratamento e acompanhamento"}</h4>
-                <p>
-                  {
-                    "Os procedimentos são realizados e a evolução é acompanhada ao longo do processo."
-                  }
-                </p>
-              </div>
-            </li>
-          </ol>
-        </div>
-        <div className="location-card">
-          <div>
-            <p className="eyebrow">{"Localização"}</p>
-            <h3>{"Clínica Rita Sudbrack"}</h3>
-          </div>
-          <address>
-            <strong>{"Rua João Pessoa, 603"}</strong>
-            <span>{"Santa Cruz do Sul — RS"}</span>
-            <span>{"Atendimento com hora marcada"}</span>
-          </address>
-          <AppointmentButton tone="light" href="https://www.google.com/maps/search/?api=1&query=Rua%20Jo%C3%A3o%20Pessoa%2C%20603%2C%20Santa%20Cruz%20do%20Sul%2C%20RS">
-            {"Ver no mapa"}
-          </AppointmentButton>
-        </div>
-      </section>
+      <ClinicVisit />
       <section className="faq" id="duvidas">
         <div className="section-shell faq-layout">
           <div className="faq-heading">
@@ -464,74 +341,6 @@ export default function ClinicHome({
               <p>
                 {
                   "Alguns tratamentos podem apresentar mudanças iniciais mais rapidamente. Outros dependem de evolução progressiva e acompanhamento. A resposta varia conforme a pele, o tratamento e os cuidados adotados."
-                }
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span>
-                  {"Como saber qual tratamento é ideal para minha pele?"}
-                </span>
-                <i aria-hidden="true">{"+"}</i>
-              </summary>
-              <p>
-                {
-                  "A avaliação personalizada é a forma mais segura de compreender quais possibilidades fazem sentido para você, evitando escolhas baseadas apenas em tendências ou recomendações genéricas."
-                }
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span>{"A clínica atende quais faixas etárias?"}</span>
-                <i aria-hidden="true">{"+"}</i>
-              </summary>
-              <p>
-                {
-                  "A clínica atende pacientes adultas com diferentes necessidades relacionadas à estética facial, à saúde e à qualidade da pele. A indicação depende das características e objetivos de cada pessoa."
-                }
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span>{"Quais cuidados devo seguir antes e depois?"}</span>
-                <i aria-hidden="true">{"+"}</i>
-              </summary>
-              <p>
-                {
-                  "Os cuidados variam conforme o procedimento. Cada paciente recebe orientações claras sobre preparação, rotina, exposição solar, produtos e cuidados posteriores."
-                }
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span>{"Como realizar o agendamento?"}</span>
-                <i aria-hidden="true">{"+"}</i>
-              </summary>
-              <p>
-                {
-                  "O agendamento é realizado pelo WhatsApp da clínica. A equipe apresenta os horários disponíveis e orienta sobre a avaliação."
-                }
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span>{"Onde a clínica está localizada?"}</span>
-                <i aria-hidden="true">{"+"}</i>
-              </summary>
-              <p>
-                {
-                  "Na Rua João Pessoa, 603, em Santa Cruz do Sul, Rio Grande do Sul. O atendimento é realizado com hora marcada."
-                }
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span>{"Quais são as formas de pagamento?"}</span>
-                <i aria-hidden="true">{"+"}</i>
-              </summary>
-              <p>
-                {
-                  "As formas de pagamento disponíveis podem variar conforme o serviço. Consulte a equipe no momento do agendamento."
                 }
               </p>
             </details>

@@ -101,12 +101,6 @@
   outline-offset: 4px;
 }
 
-/* O card de localização também é verde, mas o botão já é claro: o hover vai para o escuro. */
-.location-card .appointment-cta.button {
-  --cta-hover: var(--soft-black);
-  --cta-hover-text: var(--off-white);
-}
-
 @media (hover: hover) {
   .appointment-cta.button:hover {
     background: none;

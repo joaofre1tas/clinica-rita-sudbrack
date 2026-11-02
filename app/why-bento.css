@@ -427,3 +427,17 @@
 .why-tile--care ul {position:absolute;bottom:14px;left:14px;right:14px;display:block;flex:none;padding:6px 18px;border:1px solid #eeeadf70;border-radius:16px;background:#eeeadfeb;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);}
 .why-tile--care li {display:block;padding:16px 0;border-radius:0;background:transparent;font-size:1rem;line-height:1.4;}
 .why-tile--care li+li {border-top:1px solid #261d1620;}
+
+/* O conteúdo não deve determinar o recorte da fotografia no celular. */
+.why-bento .melasma-card {grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);}
+@media(width<=920px) {.why-bento .melasma-card {grid-template-columns:1fr;}}
+@media(width<=640px) {
+ .why-bento .melasma-card {display:block;padding:0;}
+ .why-bento .melasma-card-photo {position:relative;inset:auto;width:100%;aspect-ratio:4/3;padding:0;background:url('/assets/images/editorial/melasma.webp') 48% center / cover;}
+ .why-bento .melasma-card > div:not(.melasma-card-photo):not(.melasma-copy) {padding:24px 24px 20px;}
+ .why-bento .melasma-card h3 {font-size:2.1rem;line-height:1.08;}
+ .why-bento .melasma-card .eyebrow {margin-bottom:12px;}
+ .why-bento .melasma-copy {max-width:none;padding:0 24px 28px;}
+ .why-bento .melasma-copy .appointment-cta {max-width:100%;}
+ .why-welcome-photo {object-position:58% 70%;}
+}

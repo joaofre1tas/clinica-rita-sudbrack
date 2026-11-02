@@ -259,3 +259,12 @@
  .cd-hero-photo[src*="/editorial/"] {object-position:78% center;}
  .cd-hero:has(.cd-hero-photo[src*="/editorial/"])::after {background:linear-gradient(0deg,#261d16eb 0%,#261d1699 60%,#261d1640 100%);}
 }
+
+/* Nos banners mobile, foto e texto têm áreas próprias. */
+@media(width<=640px) {
+ .cd-hero {display:block;min-height:0;}
+ .cd-hero-photo {position:relative;inset:auto;z-index:0;height:auto;aspect-ratio:4/3;object-fit:cover;}
+ .cd-hero-photo[src*="/editorial/"] {object-position:78% center;}
+ .cd-hero::after,.cd-hero:has(.cd-hero-photo[src*="/editorial/"])::after {display:none;}
+ .cd-hero-content {position:relative;padding:24px;}
+}

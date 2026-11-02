@@ -139,3 +139,12 @@
 }
 
 .course-tile-photo[src*="/editorial/"] {object-position:76% center;}
+
+/* Preserva o procedimento acima do texto nos cards do celular. */
+@media (width <= 640px) {
+  .course-tile {display:flex;flex-direction:column;min-height:0;aspect-ratio:auto;background:var(--brown);}
+  .course-tile-photo {position:relative;inset:auto;height:auto;aspect-ratio:1;object-fit:cover;}
+  .course-tile-photo[src*="/editorial/"] {object-position:78% center;}
+  .course-tile-photo[src*="sobrancelhas-card"] {object-position:center 35%;}
+  .course-tile-info {position:relative;inset:auto;flex:1;margin:12px;padding:20px;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;}
+}

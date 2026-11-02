@@ -184,9 +184,6 @@ export default function ClinicHome({
       <WhyBento>
         <article className="melasma-card">
           <div className="melasma-card-photo" aria-hidden="true" />
-          <div className="melasma-index" aria-hidden="true">
-            {"MC"}
-          </div>
           <div>
             <p className="eyebrow">{"Diferencial exclusivo"}</p>
             <h3>{"Melasma Control"}</h3>
